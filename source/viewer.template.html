@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Medical records from a pilot</title>
+<style>/*__STYLE__*/</style>
+</head>
+<body>
+<main>
+  <section id="loading"><p>Opening the link...</p></section>
+
+  <section id="ready" hidden>
+    <h1>Medical records sent by a pilot</h1>
+    <p>This link stops working on <span id="expires"></span>.</p>
+    <button id="download" type="button">Download PDF</button>
+    <p id="progress" class="quiet" aria-live="polite"></p>
+    <p class="quiet">The pilot encrypted this file on their device. Pilot Medical Guardian doesn't have the key and can't read it.</p>
+    <p class="quiet">The pilot prepared these records. Pilot Medical Guardian doesn't review or verify them, and nothing here is medical advice or an FAA determination.</p>
+  </section>
+
+  <section id="gone" hidden>
+    <h1>This link isn't working</h1>
+    <p>It may have expired or been stopped. Ask the pilot to send a new one.</p>
+  </section>
+
+  <section id="incomplete" hidden>
+    <h1>This link looks incomplete</h1>
+    <p>Email programs sometimes cut long links. Copy the whole link, or ask the pilot to send it again.</p>
+  </section>
+
+  <section id="notpdf" hidden>
+    <h1>This file couldn't be opened</h1>
+    <p>Nothing was downloaded. Ask the pilot to send a new link.</p>
+  </section>
+
+  <section id="error" hidden>
+    <h1>Something went wrong</h1>
+    <p>Check your connection and reload this page. If it keeps happening, ask the pilot to send a new link.</p>
+  </section>
+</main>
+<script>/*__SCRIPT__*/</script>
+</body>
+</html>

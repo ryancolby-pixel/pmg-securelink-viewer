@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Medical records from a pilot</title>
+<style>
+:root { color-scheme: light dark; --fg: #1d1d1f; --muted: #5f6368; --bg: #f5f5f7; --card: #ffffff; --accent: #1f6fd1; }
+@media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --card: #1c1c1e; --accent: #4a90e2; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 560px; margin: 0 auto; padding: 48px 16px; }
+section { background: var(--card); border-radius: 16px; padding: 28px 24px; }
+h1 { font-size: 24px; line-height: 1.25; margin: 0 0 12px; }
+p { margin: 0 0 12px; }
+.quiet { color: var(--muted); font-size: 15px; }
+button { font: inherit; font-weight: 600; color: #fff; background: var(--accent); border: 0; border-radius: 10px; padding: 12px 22px; margin: 8px 0 16px; cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: default; }
+
+</style>
+</head>
+<body>
+<main>
+  <section id="loading"><p>Opening the link...</p></section>
+
+  <section id="ready" hidden>
+    <h1>Medical records sent by a pilot</h1>
+    <p>This link stops working on <span id="expires"></span>.</p>
+    <button id="download" type="button">Download PDF</button>
+    <p id="progress" class="quiet" aria-live="polite"></p>
+    <p class="quiet">The pilot encrypted this file on their device. Pilot Medical Guardian doesn't have the key and can't read it.</p>
+    <p class="quiet">The pilot prepared these records. Pilot Medical Guardian doesn't review or verify them, and nothing here is medical advice or an FAA determination.</p>
+  </section>
+
+  <section id="gone" hidden>
+    <h1>This link isn't working</h1>
+    <p>It may have expired or been stopped. Ask the pilot to send a new one.</p>
+  </section>
+
+  <section id="incomplete" hidden>
+    <h1>This link looks incomplete</h1>
+    <p>Email programs sometimes cut long links. Copy the whole link, or ask the pilot to send it again.</p>
+  </section>
+
+  <section id="notpdf" hidden>
+    <h1>This file couldn't be opened</h1>
+    <p>Nothing was downloaded. Ask the pilot to send a new link.</p>
+  </section>
+
+  <section id="error" hidden>
+    <h1>Something went wrong</h1>
+    <p>Check your connection and reload this page. If it keeps happening, ask the pilot to send a new link.</p>
+  </section>
+</main>
+<script>
+// PMGL v1: the secure-link file format (SecureLink/README.md, "The file format").
+// Shared by the AME viewer (inlined into the page at build time, with the `export` keywords stripped) and the tests.
+// The app writes the same bytes with CryptoKit. Pure WebCrypto: runs in browsers and Node 20+.
+
+const PMGL_MAGIC = [0x50, 0x4d, 0x47, 0x4c]; // "PMGL"
+const PMGL_VERSION = 1;
+const PMGL_CHUNK = 4 * 1024 * 1024;          // plaintext bytes per non-final chunk
+const PMGL_TAG = 16;                          // AES-GCM tag
+const PMGL_HEADER = 16;                       // magic(4) version(1) zero(3) noncePrefix(8)
+
+function pmglU32(n) {
+  const b = new Uint8Array(4);
+  new DataView(b.buffer).setUint32(0, n, false);
+  return b;
+}
+function pmglCat(...parts) {
+  let n = 0;
+  for (const p of parts) n += p.length;
+  const out = new Uint8Array(n);
+  let k = 0;
+  for (const p of parts) { out.set(p, k); k += p.length; }
+  return out;
+}
+const pmglNonce = (prefix, i) => pmglCat(prefix, pmglU32(i));
+const pmglAAD = (header, i, isFinal) => pmglCat(header, pmglU32(i), new Uint8Array([isFinal ? 1 : 0]));
+
+function pmglHeader(prefix) {
+  const h = new Uint8Array(PMGL_HEADER);
+  h.set(PMGL_MAGIC, 0);
+  h[4] = PMGL_VERSION;
+  h.set(prefix, 8);
+  return h;
+}
+
+async function pmglImportKey(raw) {
+  if (raw.length !== 32) throw new Error("format");
+  return crypto.subtle.importKey("raw", raw, { name: "AES-GCM" }, false, ["encrypt", "decrypt"]);
+}
+
+/// Reference encryptor (tests; the app does the same in CryptoKit). A full-size chunk is never final, so a plaintext
+/// that is an exact multiple of PMGL_CHUNK (including empty) ends with an empty final chunk.
+async function pmglEncrypt(rawKey, plaintext, prefix = crypto.getRandomValues(new Uint8Array(8))) {
+  const key = await pmglImportKey(rawKey);
+  const header = pmglHeader(prefix);
+  const parts = [header];
+  for (let i = 0, off = 0; ; i++) {
+    const end = Math.min(off + PMGL_CHUNK, plaintext.length);
+    const isFinal = end - off < PMGL_CHUNK;
+    parts.push(new Uint8Array(await crypto.subtle.encrypt(
+      { name: "AES-GCM", iv: pmglNonce(prefix, i), additionalData: pmglAAD(header, i, isFinal), tagLength: 128 },
+      key, plaintext.subarray(off, end))));
+    off = end;
+    if (isFinal) break;
+  }
+  return pmglCat(...parts);
+}
+
+/// Streaming decryptor: push() network pieces as they arrive (returns finished plaintext chunks), then finish().
+/// Holds at most one chunk plus one network piece, so an 80 MB file never needs two full copies in memory.
+class PmglDecryptor {
+  #key; #pending = []; #len = 0; #header = null; #prefix = null; #i = 0;
+  constructor(key) { this.#key = key; }
+
+  #take(n) {
+    const out = new Uint8Array(n);
+    let k = 0;
+    while (k < n) {
+      const p = this.#pending[0];
+      const use = Math.min(p.length, n - k);
+      out.set(p.subarray(0, use), k);
+      k += use;
+      if (use === p.length) this.#pending.shift(); else this.#pending[0] = p.subarray(use);
+    }
+    this.#len -= n;
+    return out;
+  }
+
+  async #open(c, isFinal) {
+    const p = new Uint8Array(await crypto.subtle.decrypt(
+      { name: "AES-GCM", iv: pmglNonce(this.#prefix, this.#i), additionalData: pmglAAD(this.#header, this.#i, isFinal), tagLength: 128 },
+      this.#key, c));
+    this.#i++;
+    return p;
+  }
+
+  async push(bytes) {
+    if (bytes && bytes.length) { this.#pending.push(bytes); this.#len += bytes.length; }
+    const out = [];
+    if (!this.#header) {
+      if (this.#len < PMGL_HEADER) return out;
+      const h = this.#take(PMGL_HEADER);
+      const ok = PMGL_MAGIC.every((x, j) => h[j] === x) && h[4] === PMGL_VERSION && h[5] === 0 && h[6] === 0 && h[7] === 0;
+      if (!ok) throw new Error("format");
+      this.#header = h;
+      this.#prefix = h.slice(8, 16);
+    }
+    while (this.#len > PMGL_CHUNK + PMGL_TAG) out.push(await this.#open(this.#take(PMGL_CHUNK + PMGL_TAG), false));
+    return out;
+  }
+
+  async finish() {
+    if (!this.#header) throw new Error("format");
+    if (this.#len < PMGL_TAG || this.#len >= PMGL_CHUNK + PMGL_TAG) throw new Error("format");
+    return this.#open(this.#take(this.#len), true);
+  }
+}
+
+
+// The AME's page. Reads the key from the #fragment (never sent to the server), removes it from the address bar,
+// shows the expiry, and on the Download click fetches the encrypted file straight from storage and decrypts it here.
+// The PMGL decryptor (shared/pmgl.mjs) is inlined above this script at build time.
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  const show = (id) => { for (const s of document.querySelectorAll("section")) s.hidden = s.id !== id; };
+  const frag = location.hash.slice(1);
+  history.replaceState(null, "", location.pathname);
+  const m = /^([A-Za-z0-9_-]{22})\.([A-Za-z0-9_-]{43})$/.exec(frag);
+  if (!m) return show("incomplete");
+  const [, id, k] = m;
+  const fromB64url = (s) => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/") + "=".repeat((4 - (s.length % 4)) % 4)), (c) => c.charCodeAt(0));
+
+  let info;
+  try {
+    const r = await fetch(`/v1/links/${id}/info`, { cache: "no-store" });
+    if (!r.ok) return show(r.status === 410 ? "gone" : "error");
+    info = await r.json();
+  } catch { return show("error"); }
+  $("expires").textContent = new Date(info.expiresAt).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+  show("ready");
+
+  const PDF = [0x25, 0x50, 0x44, 0x46, 0x2d]; // %PDF-
+  $("download").addEventListener("click", async () => {
+    const button = $("download"), progress = $("progress");
+    button.disabled = true;
+    progress.textContent = "Downloading...";
+    try {
+      const r = await fetch(`/v1/links/${id}/download`, { method: "POST", cache: "no-store" });
+      if (!r.ok) return show(r.status === 410 ? "gone" : "error");
+      const { url } = await r.json();
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok || !res.body) throw new Error("fetch");
+
+      const dec = new PmglDecryptor(await pmglImportKey(fromB64url(k)));
+      const parts = [];
+      let checked = false;
+      const keep = (p) => {
+        if (!checked && p.length) {
+          if (p.length < PDF.length || !PDF.every((x, i) => p[i] === x)) throw new Error("notpdf");
+          checked = true;
+        }
+        parts.push(p);
+      };
+      const reader = res.body.getReader();
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        for (const p of await dec.push(value)) keep(p);
+      }
+      keep(await dec.finish());
+      if (!checked) throw new Error("notpdf");
+
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob(parts, { type: "application/pdf" }));
+      a.download = `Pilot medical records ${info.sentDay}.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      parts.length = 0;
+      setTimeout(() => URL.revokeObjectURL(a.href), 60000);   // don't keep the plaintext in memory longer than needed
+      progress.textContent = "Downloaded. Look in your Downloads folder.";
+      button.disabled = false;
+    } catch (e) {
+      show(e && e.message === "notpdf" ? "notpdf" : "error");
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
