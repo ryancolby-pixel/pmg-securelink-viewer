@@ -16,11 +16,11 @@ The live page is at `/r` on the host in the link (the part before the `#`):
 
 It should print the same hash as `viewer.html` in SHA256SUMS:
 
-    aa38713457a06285511ba522c5ef16fd6752fbd17e606266ae1963c5a19d57ae
+    a964fa12e08cd1452eefeda6f9e60a5218fe73d5584d6403bdb40b9e28e13241
 
 ## What's in it
 
-- `viewer.html`: the page exactly as the server sends it (9813 bytes). Its Content-Security-Policy allows only
+- `viewer.html`: the page exactly as the server sends it (9987 bytes). Its Content-Security-Policy allows only
   the inline script and style with these hashes, so the browser runs nothing else:
   - script `sha256-dm1L3lzxrINlIJNH/l7IEuPFEAn3S+M/4kF8wtUCZH8=`
   - style `sha256-m8KM+kK2H3F9XLOv0gEm80I+Dewmn3IEg8+uL4HdGig=`
