@@ -1,0 +1,1415 @@
+[
+  {
+    "id": "si-adhd",
+    "name": "ADHD",
+    "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/adhd",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "FAA ADHD DOCUMENT CHECKLIST",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/ADHD_document_checklist.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "The evaluation and report must be performed within 90 days of the AME exam:",
+          "Collect the following information and send to the psychologist or neuropsychologist for review BEFORE your appointment:",
+          "Pharmacy records within the last four (4) years",
+          "Medical records related to the diagnosis and treatment for ADHD",
+          {
+            "quote": "Any other evaluations or treatment records related to ADHD or learning issues from any of the following, if applicable:",
+            "sub": [
+              "Psychiatrist;",
+              "Psychologist;",
+              "Therapist;",
+              "School counselor;",
+              "Education specialist/teacher;",
+              "Speech Therapist; and/or",
+              "Occupational Therapist"
+            ]
+          },
+          "Medical records related to any other condition (for a non-ADHD diagnosis) which was treated with ADHD medication(s).",
+          "Driver’s license records from all states where a license has been issued within the past four (4) years, as applicable.",
+          "Academic records: All transcripts through highest grade or degree, Section 504 Plans, any Individualized Education Programs (IEP), and any records for any history of academic/occupational accommodations.",
+          "Personal Statement which describes all items on the FAA ADHD Personal Statement Guidelines.",
+          "Remember to make a copy of all the records above as you will also need to bring a copy to your AME to upload into your FAA record.",
+          "In some cases, the psychologist or neuropsychologist may request the entire FAA medical file (e.g., if it contains relevant information you are unable to produce). To request that a copy of your agency records be sent directly to the psychologist or neuropsychologist, submit Form FAA 8065-2 - REQUEST FOR AIRMAN MEDICAL RECORDS."
+        ]
+      },
+      {
+        "title": "FAST TRACK - FAA ADHD EVALUATION GENERAL INFORMATION FOR PILOTS AND ATCS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/ADHD_fast_track_eval_general_info.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          {
+            "quote": "Bring all the following to your AME visit:",
+            "sub": [
+              "Completed FAA ADHD Summary;",
+              "Actual clinical summary report from the psychologist or neuropsychologist; and",
+              "Any records reviewed by the psychologist or neuropsychologist."
+            ]
+          },
+          "Bring information on any other condition that may require a Special Issuance/AASI/CACI (pilots) or Special Consideration (ATCS)."
+        ]
+      },
+      {
+        "title": "STANDARD TRACK - FAA ADHD EVALUATION GENERAL INFORMATION FOR PILOTS AND ATCS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/ADHD_standard_track_eval_general_info.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "If ADHD testing is required, the applicant will need to complete a urinalysis for amphetamines and methylphenidate within 24 hours after completing testing.",
+          "You must order both tests: one for amphetamines and one for methylphenidate. They are two different tests/different test batteries.",
+          "Actual laboratory results are required (not clinical summary of results)."
+        ]
+      },
+      {
+        "title": "STANDARD TRACK - FAA ADHD EVALUATION REPORT REQUIREMENTS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/ADHD_standard_track_report_requirements.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          {
+            "quote": "WHEN YOU HAVE COMPLETED YOUR ASSESSMENT: Submit to the AME of record (for direct upload into AMCS) or as specified in the FAA letter:",
+            "sub": [
+              "Copy of your full report (not the patient portal notes) containing a MINIMUM of all the above elements;",
+              "Copies of all records you reviewed to make your assessment. (Exclude copies of any Fast Track document if already submitted to FAA and any records previously received by you from the FAA.);",
+              "Copies of all computer score reports; and",
+              "An appended score summary sheet that includes raw scores, percentile scores, and/or standard scores for all tests administered."
+            ]
+          }
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-asthma",
+    "name": "Asthma",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item35/amd/asthma",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Asthma.pdf",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AASI for Asthma",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Asthma.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA;",
+          "Annual, current, detailed Clinical Progress Note generated from a clinic visit with the treating pulmonologist no more than 90 days before the AME exam. It must include a detailed interim summary; current medications, dosage, and side effects (if any); physical exam findings; results of all testing performed; diagnosis; assessment and plan (prognosis); and follow-up.",
+          "It must specifically include if there has been any worsening in symptoms, hospitalizations, exacerbations, or inadequate compliance with treatment.",
+          "Pulmonary function testing, if deemed necessary, performed no more than 90 days before the AME exam."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-afib",
+    "name": "Atrial fibrillation",
+    "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/afib",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/afib",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Atrial Fibrillation",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/afib",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA;",
+          "A report of a minimum 24-hour cardiac monitor performed within last 90 days. (Cardiac monitor report must be submitted, even if findings are normal, and should include 1-page computerized summary and the representative full-scale multi-lead ECG tracings);",
+          "A completed Non-Valvular Atrial Fibrillation (AFIB)/A-Flutter Status Summary (PDF) AND a cardiologist evaluation that addresses all items on the status report; and"
+        ],
+        "more": true
+      },
+      {
+        "title": "NON-VALVULAR ATRIAL FIBRILLATION (AFIB)/A-FLUTTER STATUS SUMMARY",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/nonvalvularAFIB_Status_summary.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Please have the cardiologist who treats your AFib or A-Flutter complete, sign, and date this sheet or submit a current, detailed Clinical Progress Note that addresses ALL items below.",
+          "Return this sheet (or a current, Detailed Clinical Progress note from the cardiologist) AND a current cardiac monitor report to your AME for electronic upload to the FAA:",
+          "You must submit the 1-page computerized summary and the representative full-scale multi-lead ECG tracings, EVEN IF FINDINGS ARE NORMAL."
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-aneurysm",
+    "name": "Brain Aneurysm",
+    "page": "https://www.faa.gov/ame_guide/media/Brain-Aneurysm.pdf",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "BRAIN ANEURYSM (Intracranial aneurysm / Cerebral aneurysm) Not Ruptured",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Brain-Aneurysm.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "If ruptured and/or repaired, refer to brain bleed/intracranial hemorrhage section.",
+          "A current, detailed neurological evaluation that meets FAA Specifications for Neurologic Evaluation generated from a clinic visit with the treating neurologist no more than 90 days before the AME exam.",
+          "CTA (preferred) or MRA head performed no more than 12 months before the AME exam.*",
+          "Previous Imaging* (CT, MRI, CTA, MRA or cerebral catheter angiography/cath angio of the head) performed at any time after the symptoms occurred.",
+          "Submit BOTH the report and a copy of the images on compact disc (CD) in DICOM readable format. (There MUST be a 'DICOMDIR' in the root directory of the CD-ROM). Please verify the CD will display the images before sending."
+        ]
+      },
+      {
+        "title": "BRAIN BLEED (Intracranial Hemorrhage, Cerebral Hemorrhage, Ruptured Aneurysm, Subarachnoid Hemorrhage, Subdural/Epidural Hemorrhage)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Brain-Bleed.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A current, detailed neurological evaluation that meets FAA Specifications for Neurologic Evaluation generated from a clinic visit with the treating neurologist (vascular neurologist preferred) no more than 90 days before the AME exam.",
+          "Brain imaging to verify bleed has resolved, performed no more than 12 months before the AME exam. If not already performed, a current test is required.",
+          "MRI brain to include sequences sensitive to the presence of hemosiderin.",
+          "CT angiography (CTA) or MRA or angiography. (Head required. Neck if clinically necessary)",
+          {
+            "quote": "Hospital records for each hospitalization related to this condition. It must include information on surgeries and procedures.",
+            "sub": [
+              "Admission History and Physical (H&P);",
+              "Emergency Medical Services (EMS)/ambulance run sheet (if applicable);",
+              "Hospital consultant report(s) (such as neurology, cardiology, internal medicine, or other specialists);",
+              "Hospital discharge summary. (Typically, the patient portal notes or after visit summary (AVS) that can be printed from an electronic medical record are NOT sufficient for pilot medical certification purposes.);",
+              "Lab report(s) including all drug or alcohol testing performed;",
+              "Operative/procedure report(s);",
+              "Pathology report(s); and",
+              "Radiology reports. The interpretive report(s) and images of all diagnostic imaging (CT scan, MRI, X- ray, ultrasound, or others) performed.",
+              "DO NOT submit miscellaneous hospital records such as flowsheets, nursing notes, physician orders, or medication administration records."
+            ]
+          },
+          "If the applicant has a large volume of records, it is recommended that they bring them to the exam so the AME can assist in determining what is miscellaneous and not needed by the FAA."
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-cancer-breast",
+    "name": "Breast cancer",
+    "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/breast_cancer",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/breast_cancer",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Breast Cancer",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/breast_cancer",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA; and",
+          "A current status report performed within 90 days that must include all the required follow-up items and studies as listed in the Authorization letter and that confirms absence of recurrent disease."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-copd",
+    "name": "COPD",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item35/amd/copd",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/copd",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - AASI for Chronic Obstructive Pulmonary Disease (COPD)",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/copd",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA;",
+          "A completed COPD Status Summary verifying all items are “YES” or a current, detailed Clinical Progress Note which addresses each item;",
+          "A pulmonary Function Test (PFT); and",
+          "A 6-Minute Walk Test (6MWT)."
+        ]
+      },
+      {
+        "title": "Chronic Obstructive Pulmonary Disease (COPD) Status Summary",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/COPD_Status_Summary.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Please have your Pulmonologist or the physician who manages your COPD provide the requested information in the space provided.",
+          "Submit this summary and a current, detailed Clinical Progress Note addressing each item.",
+          "Attach a copy of Pulmonary Function Test (#3) and the 6-minute Walk Test results (#4) and submit to your AME or mail to the FAA:",
+          "Explain any “NO” answers or other concerns. (Attach a current, detailed Clinical Progress Note)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-cad-pci",
+    "name": "Coronary artery disease with stent (PCI)",
+    "page": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AASI for Coronary Heart Disease (CHD)",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Authorization granted by the FAA;",
+          "Coronary Heart Disease (CHD)/ Coronary Artery Disease (CAD) Recertification Status Summary (PDF) – Completed within the past 90 days."
+        ]
+      },
+      {
+        "title": "Coronary Heart Disease (CHD)/ Coronary Artery Disease (CAD) RECERTIFICATION Status Summary",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/CHD_CAD_Recert_Status_Summary.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "To expedite recertification, have your cardiologist complete, sign, and date this status summary. If any “NO*” responses or change in your condition(s), you must also submit a current, detailed Clinical Progress Note addressing ALL items.",
+          "Return the information to your AME for electronic upload to the FAA.",
+          {
+            "quote": "Results of testing performed no more than 90 days before the AME exam",
+            "sub": [
+              "A1c must be submitted even if there is no diagnosis of diabetes."
+            ]
+          },
+          "Current medication list attached OR list all current therapy (medication and dose)",
+          "As of 05/29/24 for routine cases, follow-up stress test is not required.",
+          "If after FAA review it is determined that a stress test is required, this status summary and a current, detailed Clinical Progress Note must be submitted."
+        ]
+      },
+      {
+        "title": "Protocol for Coronary Heart Disease – 1st and 2nd Class and ATCS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_1st-2nd_class.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "After the required recovery period, obtain the following and submit to the FAA. Post-event testing should NOT be obtained until AFTER the recovery period.",
+          "Hospital records. Submit copies of:\n• Admission history & physical (H&P);\n• Operative report, if applicable (CABG, stent, or other procedure performed);\n• Discharge summary from the physician (NOT the discharge instructions/paperwork given to the patient when leaving the hospital); and\n• Coronary catheterization (heart cath) or ischemia work up (if performed). Submit both the images on CD AND the printed report.",
+          "Cardiology narrative. A current evaluation by the cardiologist in the form of a detailed Clinical Progress Note which must include:\n• A detailed summary of the history of any cardiac or co-morbid condition(s);\n• Personal and family medical history including premature heart disease;\n• Current medications, dosage, and side effects (if any);\n• Clinical cardiac and general physical exam findings;\n• Results of any testing performed;\n• Diagnosis;\n• Assessment and plan;\n• Prognosis and Follow-up.\nIt must specifically include:\n• If hospitalization or procedure, include a summary of events that led to the cardiac intervention(s) or treatment;\n• A statement regarding the individual’s functional capacity and if they have been returned to their regular activity;\n• Attempts to meet the guidelines for modifiable risk factors (such as lipid levels, aspirin use, beta-blocker use, and smoking cessation per the American College of Cardiology and American Heart Association); and\n• Prognosis for incapacitation.",
+          "Labs performed no more than 90 days before AME exam\n• Hemoglobin A1c;\n• Lipid profile to include total cholesterol, HDL, LDL, and triglycerides; and\n• INR monthly readings if on warfarin (Jantoven)",
+          "Post-Event Radionuclide stress test (Stress RS) with imaging performed AFTER the event. Submit the report, images on CD in DICOM format (e.g., the “Rest/Stress multi-slice three-axis splash images”), and electrical tracings. Note: A Stress echo cannot take the place of the stress RS for 1st or 2nd class (full or limited). Due to poor image quality, Xeroxed or faxed images will not be accepted.",
+          "Civil Aerospace Medical Institute (CAMI) Limited Certificate Petition. (Informs FAA if you will accept a lower-class medical certificate). It should be submitted regardless of the answer chosen.",
+          "Post-Event Heart Catheterization (Heart cath/cardiac angiography) with imaging. Submit both the report AND actual images on CD.\n• Required for 1st class and for full 2nd class\n• Not required for Limited Second Class or ATCS\n• For new applicants, the post-event cath must have been performed within the last five (5) years.",
+          "To aid in the review process, it is critical that the individual’s full name and date of birth appear on all correspondence and reports."
+        ]
+      },
+      {
+        "title": "Protocol for Coronary Heart Disease (CHD) 3rd Class",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_3rd_class.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Recovery period. There is NO mandatory recovery period per Public Law 114-190 5/2017, but the applicant should be released by the treating physician before obtaining the following evaluations.",
+          "Hospital records. Submit copies of:\n• Admission history & physical (H&P);\n• Operative report, if applicable (CABG, stent, or other procedure performed);\n• Discharge summary from the physician (NOT the discharge instructions/paperwork given to the patient when leaving the hospital). Typically, the patient portal notes or after visit summary (AVS) that can be printed from the electronic medical record are NOT sufficient for pilot medical certification purposes.); and\n• Coronary catheterization (heart cath) or ischemia work up (if performed), submit both the images on CD AND the printed report.",
+          "Cardiology narrative. A current evaluation by your cardiologist in the form of a detailed Clinical Progress Note which must include:\n• A detailed summary of the history of any cardiac or co-morbid condition(s);\n• Personal and family medical history including premature heart disease;\n• Current medications, dosage, and side effects (if any);\n• Clinical cardiac and general physical exam findings;\n• Results of any testing performed;\n• Diagnosis;\n• Assessment and plan;\n• Prognosis and Follow-up.",
+          {
+            "quote": "It must specifically include:",
+            "sub": [
+              "If hospitalization or procedure, include a summary of events that lead to the cardiac intervention(s) or treatment;",
+              "A statement regarding the individual’s functional capacity and if they have been returned to their regular activity;",
+              "Attempts to meet the guidelines for modifiable risk factors (such as lipid levels, aspirin use, beta-blocker use, and smoking cessation per the American College of Cardiology and American Heart Association); and",
+              "Prognosis for incapacitation."
+            ]
+          },
+          "Labs performed no more than 90 days before AME exam\n• Hemoglobin A1c;\n• Lipid profile to include total cholesterol, HDL, LDL, and triglycerides; and\n• INR monthly readings if on warfarin (Jantoven)",
+          "Exercise Stress Test (EST) with electrical tracings performed AFTER the event and within 90 days of the AME exam which meets the Exercise Stress Test (EST) Protocol Requirements. If a radionuclide stress (RS) or cardiac catheterization (cardiac angiogram) were performed, submit those reports. Note: Do not submit imaging on CD unless requested by the FAA.",
+          "To aid in the review process, it is critical that the applicant’s full name and date of birth appear all correspondence and reports. Bring all information to your AME to upload into your FAA record."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-cabg",
+    "name": "Coronary bypass (CABG)",
+    "page": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AASI for Coronary Heart Disease (CHD)",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Authorization granted by the FAA;",
+          "Coronary Heart Disease (CHD)/ Coronary Artery Disease (CAD) Recertification Status Summary (PDF) – Completed within the past 90 days."
+        ]
+      },
+      {
+        "title": "Coronary Heart Disease (CHD)/ Coronary Artery Disease (CAD) RECERTIFICATION Status Summary",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/CHD_CAD_Recert_Status_Summary.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "To expedite recertification, have your cardiologist complete, sign, and date this status summary. If any “NO*” responses or change in your condition(s), you must also submit a current, detailed Clinical Progress Note addressing ALL items.",
+          "Return the information to your AME for electronic upload to the FAA.",
+          {
+            "quote": "Results of testing performed no more than 90 days before the AME exam",
+            "sub": [
+              "A1c must be submitted even if there is no diagnosis of diabetes."
+            ]
+          },
+          "Current medication list attached OR list all current therapy (medication and dose)",
+          "As of 05/29/24 for routine cases, follow-up stress test is not required.",
+          "If after FAA review it is determined that a stress test is required, this status summary and a current, detailed Clinical Progress Note must be submitted."
+        ]
+      },
+      {
+        "title": "Protocol for Coronary Heart Disease – 1st and 2nd Class and ATCS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_1st-2nd_class.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "After the required recovery period, obtain the following and submit to the FAA. Post-event testing should NOT be obtained until AFTER the recovery period.",
+          "Hospital records. Submit copies of:\n• Admission history & physical (H&P);\n• Operative report, if applicable (CABG, stent, or other procedure performed);\n• Discharge summary from the physician (NOT the discharge instructions/paperwork given to the patient when leaving the hospital); and\n• Coronary catheterization (heart cath) or ischemia work up (if performed). Submit both the images on CD AND the printed report.",
+          "Cardiology narrative. A current evaluation by the cardiologist in the form of a detailed Clinical Progress Note which must include:\n• A detailed summary of the history of any cardiac or co-morbid condition(s);\n• Personal and family medical history including premature heart disease;\n• Current medications, dosage, and side effects (if any);\n• Clinical cardiac and general physical exam findings;\n• Results of any testing performed;\n• Diagnosis;\n• Assessment and plan;\n• Prognosis and Follow-up.\nIt must specifically include:\n• If hospitalization or procedure, include a summary of events that led to the cardiac intervention(s) or treatment;\n• A statement regarding the individual’s functional capacity and if they have been returned to their regular activity;\n• Attempts to meet the guidelines for modifiable risk factors (such as lipid levels, aspirin use, beta-blocker use, and smoking cessation per the American College of Cardiology and American Heart Association); and\n• Prognosis for incapacitation.",
+          "Labs performed no more than 90 days before AME exam\n• Hemoglobin A1c;\n• Lipid profile to include total cholesterol, HDL, LDL, and triglycerides; and\n• INR monthly readings if on warfarin (Jantoven)",
+          "Post-Event Radionuclide stress test (Stress RS) with imaging performed AFTER the event. Submit the report, images on CD in DICOM format (e.g., the “Rest/Stress multi-slice three-axis splash images”), and electrical tracings. Note: A Stress echo cannot take the place of the stress RS for 1st or 2nd class (full or limited). Due to poor image quality, Xeroxed or faxed images will not be accepted.",
+          "Civil Aerospace Medical Institute (CAMI) Limited Certificate Petition. (Informs FAA if you will accept a lower-class medical certificate). It should be submitted regardless of the answer chosen.",
+          "Post-Event Heart Catheterization (Heart cath/cardiac angiography) with imaging. Submit both the report AND actual images on CD.\n• Required for 1st class and for full 2nd class\n• Not required for Limited Second Class or ATCS\n• For new applicants, the post-event cath must have been performed within the last five (5) years.",
+          "To aid in the review process, it is critical that the individual’s full name and date of birth appear on all correspondence and reports."
+        ]
+      },
+      {
+        "title": "Protocol for Coronary Heart Disease (CHD) 3rd Class",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_3rd_class.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Recovery period. There is NO mandatory recovery period per Public Law 114-190 5/2017, but the applicant should be released by the treating physician before obtaining the following evaluations.",
+          "Hospital records. Submit copies of:\n• Admission history & physical (H&P);\n• Operative report, if applicable (CABG, stent, or other procedure performed);\n• Discharge summary from the physician (NOT the discharge instructions/paperwork given to the patient when leaving the hospital). Typically, the patient portal notes or after visit summary (AVS) that can be printed from the electronic medical record are NOT sufficient for pilot medical certification purposes.); and\n• Coronary catheterization (heart cath) or ischemia work up (if performed), submit both the images on CD AND the printed report.",
+          "Cardiology narrative. A current evaluation by your cardiologist in the form of a detailed Clinical Progress Note which must include:\n• A detailed summary of the history of any cardiac or co-morbid condition(s);\n• Personal and family medical history including premature heart disease;\n• Current medications, dosage, and side effects (if any);\n• Clinical cardiac and general physical exam findings;\n• Results of any testing performed;\n• Diagnosis;\n• Assessment and plan;\n• Prognosis and Follow-up.",
+          {
+            "quote": "It must specifically include:",
+            "sub": [
+              "If hospitalization or procedure, include a summary of events that lead to the cardiac intervention(s) or treatment;",
+              "A statement regarding the individual’s functional capacity and if they have been returned to their regular activity;",
+              "Attempts to meet the guidelines for modifiable risk factors (such as lipid levels, aspirin use, beta-blocker use, and smoking cessation per the American College of Cardiology and American Heart Association); and",
+              "Prognosis for incapacitation."
+            ]
+          },
+          "Labs performed no more than 90 days before AME exam\n• Hemoglobin A1c;\n• Lipid profile to include total cholesterol, HDL, LDL, and triglycerides; and\n• INR monthly readings if on warfarin (Jantoven)",
+          "Exercise Stress Test (EST) with electrical tracings performed AFTER the event and within 90 days of the AME exam which meets the Exercise Stress Test (EST) Protocol Requirements. If a radionuclide stress (RS) or cardiac catheterization (cardiac angiogram) were performed, submit those reports. Note: Do not submit imaging on CD unless requested by the FAA.",
+          "To aid in the review process, it is critical that the applicant’s full name and date of birth appear all correspondence and reports. Bring all information to your AME to upload into your FAA record."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-ssri",
+    "name": "Depression / anxiety on an approved antidepressant",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item47/amd/antidepressants",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that the treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Anxiety_Depression_Related_Conditions.pdf",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AASI for Anxiety, Depression, and Related Conditions PATH",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Anxiety_Depression_Related_Conditions.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA that states that AASI PATH has been approved;",
+          "All interim Detailed Clinical Progress Notes (DCPN). At a MINIMUM, this must include:\na. EVERY 6 months (or more often as clinically indicated), progress notes from a clinic visit with a treating physician (MD/DO) or extender (PA-C/NP/midlevel);\nb. At least one of these 6-month visits (and corresponding progress note) must come from a physician (MD/DO), such as a Primary Care Physician or Psychiatrist.\nc. The most recent clinical progress note must be no more than 90 days before the AME exam;\nd. Detailed Clinical Progress Notes must include a detailed interim summary; current medications, dosages, and side effects (if any); any changes in medication dose or type since the last visit; physical exam findings; results of all testing performed; diagnosis; assessment and plan (prognosis); and follow-up; and",
+          "Anxiety, Depression, and Related Conditions PATH Status Summary completed by the treating physician and AME."
+        ]
+      },
+      {
+        "title": "PATH Status Summary Anxiety, Depression, and Related Conditions",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/PATH_Status_Summary_Anxiety_Depression_Related_Conditions.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "If your SI/SC letter places you in the PATH program, have your treating clinician complete Section 1, then bring this signed page and all interim detailed clinical progress notes (DCPN) to your AME for review and upload them into your FAA file.",
+          "Section 1. Treating clinician. Please answer questions 1 and 2, sign, and return this form to the patient or their Aviation Medical Examiner (AME). See the DCPN criteria, as a letter to the FAA may not contain all the needed information."
+        ]
+      },
+      {
+        "title": "HIMS AME Checklist - SSRI Recertification/Follow-Up Clearance",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/HIMS_AME_Checklist_SSRI_Recertification.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "TREATING PSYCHIATRIST REPORT: Required EVERY 6 months for ALL CLASSES\nOR\nHIMS PSYCHIATRIST REPORT plus PRESCRIBING PHYSICIAN REPORT",
+          "ADDITIONAL REPORTS required by Authorization letter"
+        ]
+      },
+      {
+        "title": "FAA CERTIFICATION AID – SSRI Recertification/ Follow-Up Clearance",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/SSRI_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "All reports must be CURRENT (within the last 90 days) for FAA purposes.",
+          "PSYCHIATRIST INTERIM HISTORY REPORT (or treating physician as noted in the Authorization letter)\nIf the prescribing physician is not a psychiatrist, items #2-7 must be submitted from the prescribing physician IN ADDITION TO the psychiatrist report.\nEvery 6 months or per Authorization Letter Or FAA ATCS Special Consideration Letter\n1. Summarize clinical findings and status of how the airman/FAA ATCS is doing.\n2. Have there been any new symptoms or hospitalizations?\n3. Did a change in dose or medication occur or is one recommended or anticipated?\n4. Have there been any clinical concerns or changes in treatment plan?\n5. Has the clinical diagnosis changed?\n6. Agreement to immediately notify the FAA (for Airmen: 405-954- 4821; for FAA ATCS, contact the RFS office) if there is any change in the airman/FAA ATCS’s condition, dosage, change in medication, or if the medication is stopped.\n7. Interval treatment records such as clinic or hospital notes should also be submitted.",
+          "*Neuropsychologist report and routine CogScreen-AE administration are no longer necessary for RENEWAL of an SSRI special issuance, except when clinically indicated or specified on the Authorization/Special Consideration Letter. (Policy change 12/15/2022)",
+          "ADDITIONAL PROVIDERS\nAdditional reports for SSRI or any other condition noted in Authorization or FAA ATCS Special Consideration Letter\nEvery 6 months or per Authorization or FAA ATCS Special Consideration Letter\nVaries. See the Authorization Letter or Special Consideration Letter. Include any drug testing results, therapist follow-up reports, social worker reports, etc.\nIf the prescribing physician is NOT a psychiatrist, reports from the prescribing physician and their clinic office notes must be submitted in addition to the required psychiatric evaluations (see above).\nIf the airman/FAA ATCS has other non-SSRI conditions that require a special issuance/consideration, those reports should also be submitted according to the Authorization or FAA ATCS Special Consideration Letter."
+        ]
+      },
+      {
+        "title": "Airman Information - SSRI INITIAL Certification",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Airman_Information_SSRI_Initial_Certification.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Provide the HIMS AME with a copy of ALL of your treatment records (no matter how many years have passed) from the time you:\n1. Sought treatment for any condition that required an SSRI or psychiatric medication or\n2. Had symptoms but were NOT on an SSRI",
+          "Have a copy of your complete FAA file sent to the HIMS AME AND to a board-certified psychiatrist if your treating physician is not a board-certified psychiatrist. See Release of Information on how to request a copy of your file.",
+          "Take the correct CERTIFICATION AID page to each of the required physicians or providers so they understand what their report must include for FAA purposes. (This should save time and decrease the letters asking for more information.)",
+          "Make sure the providers specifically address in their report the “FAA SSRI “Rule-Outs.”",
+          "***Remember to bring all documents to this evaluation, including information on any other condition you may have that requires a CACI or Special Issuance. ***"
+        ]
+      },
+      {
+        "title": "HIMS AME Checklist - SSRI INITIAL Certification/Clearance",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/HIMS_AME_Checklist_SSRI_Initial_Certification.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          {
+            "quote": "NEUROPSYCHOLOGIST REPORT:",
+            "sub": [
+              "CogScreen-AE computerized report is attached",
+              "Additional neuropsychological testing (if performed or required) score summary sheet is attached."
+            ]
+          },
+          {
+            "quote": "ADDITIONAL REPORTS",
+            "sub": [
+              "Reports from other providers or for non-SSRI conditions that may require SI or SC"
+            ]
+          }
+        ],
+        "more": true
+      },
+      {
+        "title": "FAA CERTIFICATION AID – SSRI INITIAL Certification/Clearance",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/FAA_Certification_Aid_SSRI_Initial_Certification.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "All reports must be CURRENT (within the last 90 days) for FAA purposes.",
+          "A typed statement, in your own words, describing your mental health history, antidepressant use, and any other treatment. At a minimum, you must include the following information:\na. Symptoms: when started, what type, and when/how you first sought treatment.\nb. List all providers you have seen for any mental health condition(s) and dates.\nc. List all medications you have taken, dates they were started and stopped, whether they helped or not.\nd. List any other treatment(s) you have utilized, dates they were started and stopped, if they helped or not.\ne. List dates and locations of any hospitalizations due to any mental health condition. If you have not had any, that must be stated.\nf. Describe your current status: current medication dose, how long you have been on it, and how you function both on and off the medication.",
+          "Sign and date your statement.",
+          "Provide copies of all of your medical/treatment records related to your mental health history (to include any treatment records for past related symptoms where you were NOT on SSRI as well as from the date you began treatment to the present) and sign two release forms* for the FAA to release a complete copy of your FAA medical file to your HIMS AME and to a board certified psychiatrist (if your treating physician is not a psychiatrist).",
+          "Supplemental reports (if any) that may be related to the condition for which the SSRI is prescribed:\n• Any drug testing results\n• Psychotherapist records and reports\n• Social worker reports"
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-valve",
+    "name": "Heart valve replacement or repair",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item36/amd/valvular",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/valve_rep",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AASI for Single Valve Replacement or Repair",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/valve_rep",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Authorization granted by the FAA",
+          "ECG - Required annually",
+          "Echo - Current 2D echocardiogram performed within 90 days",
+          "INRs for Mechanical Heart Values - A minimum of monthly International Normalized Ratio (INR) results for the immediate prior six months",
+          "Status report – performed within the past 90 days in accordance with the appropriate CHD Protocol (1st or 2nd Class; 3rd Class)."
+        ]
+      },
+      {
+        "title": "PROTOCOL FOR CARDIAC VALVE REPLACEMENT › FOLLOW-UP CERTIFICATION",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/CardiacValveReplacementProtocol.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "After initial certification, all classes are usually followed at 12-month intervals with the following requirements:\n• Current clinical status report from your treating cardiologist;\n• Standard resting ECG; (actual LEGIBLE tracing);\n• Doppler echocardiogram report; and\n• If used, a warfarin (Jantoven) status report: Include dose; monthly INRs; any complications from treatment and subsequent actions taken."
+        ]
+      },
+      {
+        "title": "PROTOCOL FOR CARDIAC VALVE REPLACEMENT › INITIAL CONSIDERATION",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/CardiacValveReplacementProtocol.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Copies of all hospital/medical records pertaining to the valve replacement:\n• Admission History & Physical (H&P);\n• Discharge summary;\n• Operative report with valve information (make, model, serial number and size); and\n• Pathology report",
+          "A current report from the treating cardiologist regarding the status of the cardiac valve replacement. It should address your general cardiovascular condition, any symptoms of valve or heart failure, any related abnormal physical findings, and must substantiate satisfactory recovery and cardiac function without evidence of embolic phenomena, significant arrhythmia, structural abnormality, or ischemic disease.",
+          "If on warfarin (Jantoven), the attending physician must confirm stability without complications. Report must include warfarin (Jantoven) dose history, schedule, and International Normalized Ratio (INR) values (monthly for the past 6-month period of observation; must be within acceptable range).",
+          "Current 24-hour Holter monitor evaluation to include select representative tracings.",
+          "If cardiac catheterization and coronary angiography have been performed, all reports AND films must be submitted, including a copy of the cineangiogram on CD-ROM in DICOM compatible format."
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-htn",
+    "name": "Hypertension on medication",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item55/amd",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/hypertension",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Hypertension (HTN)",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/hypertension",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA;",
+          "A current status report from the treating physician detailing:\nIf the is condition stable and, if so, for how long;\nAny secondary cause for the HTN;\nAny co-morbid condition (such as diabetes, obstructive sleep apnea); and\nAny history of end organ damage (such as heart failure, myocardial infarction, cerebrovascular accident, kidney disease, eye disease); and\nThe name and dosage of medication(s) and presence or absence of any side effects."
+        ]
+      },
+      {
+        "title": "Item 36. Heart – Hypertension",
+        "sourceURL": "https://www.faa.gov/ame_guide/app_process/exam_tech/item36/amd/hypertension",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Current status report from treating physician with treatment plan, prognosis and how long the condition has been stable;",
+          "Specific mention if there is a secondary cause for HTN or any evidence of a co-morbid condition (ex. diabetes or OSA), or end organ damage (ex. renal insufficiency, kidney disease, eye disease, MI, CVA heart failure, etc); and",
+          "List of medications, dates started and stopped, and any side effects."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-dm-insulin",
+    "name": "Insulin-treated diabetes",
+    "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/itdm",
+    "letter": {
+      "quote": "Once the individual has obtained an Authorization for Special Issuance, they should submit the requirements specified in their Authorization Letter.",
+      "sourceURL": "https://www.faa.gov/ame_guide/media/ITDM-Renewal_Certification_Requirements.pdf",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "CGM RENEWAL CERTIFICATE REQUIREMENTS: EVERY 6 MONTHS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/ITDM-Renewal_Certification_Requirements.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          {
+            "quote": "ITEM #1 Every 3 months, a comprehensive endocrinology clinical examination.",
+            "sub": [
+              "Every 6-month visit must be in-person and performed by your endocrinologist.",
+              "The 3-month interval visits may be in person or virtually at the discretion of the endocrinologist.",
+              "These interval visits may be from your endocrinologist or a mid-level practitioner [physician assistant (PA) or nurse practitioner (NP)] associated with your endocrinologist:",
+              "It should include all parts of the clinical examination: a summary of the history of the condition; current medications (dosages and side effects, if any); clinical exam findings; comprehensive foot exam (e.g., visual inspection, sensation, 10-g monofilament exam, etc.); results of any testing performed; diagnosis; assessment; plan (prognosis); and follow- up.",
+              "After the examination, obtain the current, detailed Clinical Progress Note from your provider.",
+              "NOTE: A letter from your endocrinologist is NOT sufficient and cannot substitute for a current detailed Clinical Progress Note.",
+              "If additional visits occur, submit those actual clinic record(s) to the FAA also."
+            ]
+          },
+          {
+            "quote": "ITEM #3 Monthly CGM data reports for the previous 6 months:",
+            "sub": [
+              "Collect data for each month. Separate the data by month (e.g., Jan. 1- 31, Feb. 1-28, March 1-31, etc.)",
+              "Continue ongoing use with a CGM device that meets FAA requirements."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "CGM RENEWAL CERTIFICATE REQUIREMENTS: EVERY 12 MONTHS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/ITDM-Renewal_Certification_Requirements.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "All items listed in the “EVERY 6 MONTHS” section above, PLUS:",
+          "ITEM #2 - Lab - Annual comprehensive panel",
+          "ITEM #4 - Eye evaluation from a board-certified ophthalmologist (M.D./ D.O.) preferred; an optometrist (OD) may be acceptable if there is no history of retinopathy.",
+          "ITEM #5 - Cardiac Risk Evaluation for age 40 and above from a board-certified cardiologist, including lab; ECG, stress test, or other cardiac testing, if clinically indicated; (Note: stress test required every five (5) years, sooner if concerns or clinically indicated."
+        ]
+      },
+      {
+        "title": "CGM RENEWAL CERTIFICATE REQUIREMENTS: EVERY 24 MONTHS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/ITDM-Renewal_Certification_Requirements.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          {
+            "quote": "ITEM #5 Cardiac Risk Evaluation for UNDER Age 40",
+            "sub": [
+              "ECG, stress test or other cardiac testing, if clinically indicated;",
+              "(Note: stress test required every five [5] years, sooner if concerns or clinically indicated.)"
+            ]
+          }
+        ],
+        "more": true
+      },
+      {
+        "title": "Disease Protocols - Insulin Treated Diabetes Mellitus - Type I or Type II - Non-CGM - Third Class Option",
+        "sourceURL": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/diabetes_insulin/subsequent",
+        "checked": "2026-11-12",
+        "quotes": [
+          "At 3-month intervals, the airman must be evaluated by the treating physician. This evaluation must include a general physical examination, review of the interval medical history, and the results of a test for glycosylated hemoglobin concentration. The physician must review the record of the airman's daily blood glucose measurements and comment on the results. The results of these quarterly evaluations must be accumulated and submitted annually unless there has been a change.",
+          "On an annual basis, the reports from the examining physician must include confirmation by an eye specialist of the absence of significant eye disease.",
+          "At the first examination after age 40 and at 5 year intervals, the report, with ECG tracings, of a maximal graded exercise stress test must be included in consideration of continued medical certification.",
+          "See Diabetes on Insulin Re-Certification Status Report Non CGM - Third Class Option (PDF)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-kidney-stones",
+    "name": "Kidney stones",
+    "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/renal_calculi",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/renal_calculi",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Renal Calculi",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/renal_calculi",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA",
+          "A statement from your treating physician regarding the location of the retained stone(s), estimation as to size of stone, and likelihood of becoming symptomatic",
+          "A current report of appropriate imaging study (IVP, KUB, Ultrasound, or Spiral CT Scan) and provide a metabolic work-up, both performed within last 90 days."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-cancer-lymphoma",
+    "name": "Lymphoma and Hodgkin's disease",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item45/amd",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/hodgkins",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Lymphoma and Hodgkin's Disease",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/hodgkins",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA",
+          "An update of the status of the disease from the last FAA medical examination and any testing deemed necessary by the treating physician."
+        ]
+      },
+      {
+        "title": "Lymphoma and Hodgkin's Disease",
+        "sourceURL": "https://www.faa.gov/ame_guide/app_process/exam_tech/item45/amd",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Submit a current status report and all pertinent medical reports. Include past and present treatment(s)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-cancer-melanoma",
+    "name": "Melanoma",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item40/amd/malignantmelanoma",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/melanoma",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Melanoma",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/melanoma",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA",
+          "A current status report performed within 90 days that must include all the required followup items and studies as listed in the Authorization letter and that confirms absence of recurrent disease."
+        ]
+      },
+      {
+        "title": "Melanoma Equal to 0.75 mm or greater in depth",
+        "sourceURL": "https://www.faa.gov/ame_guide/app_process/exam_tech/item40/amd/malignantmelanoma",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Medical records describing the diagnosis and treatment",
+          "Pathology report(s)",
+          "Operative notes",
+          "Current status report that includes if any additional lesions, any metastatic disease, any current or future treatment planned",
+          "Current MRI brain"
+        ]
+      },
+      {
+        "title": "Metastatic Melanoma OR Melanoma of Unknown Primary Origin",
+        "sourceURL": "https://www.faa.gov/ame_guide/app_process/exam_tech/item40/amd/malignantmelanoma",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Info from Melanoma greater than 0.75 mm above",
+          "PET scan",
+          "Copies of any additional testing performed by your treating physician not listed above"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-migraine",
+    "name": "Migraine",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item46/amd",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/migraine",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Migraine Headaches",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/migraine",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA",
+          "A statement regarding the frequency of headaches and/or other associated symptoms since last followup report",
+          "A statement regarding if the characteristics of the headaches changed",
+          "The name and dosage of medication(s) used for treatment and/or prevention with comment regarding side effects."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-osa",
+    "name": "Obstructive Sleep Apnea on CPAP",
+    "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/osa",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "AASI for Sleep Apnea/Obstructive Sleep Apnea (OSA)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Sleep_Apnea_OSA.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA; AND",
+          "A completed and signed OSA TREATED STATUS REPORT OR",
+          "A current Detailed Clinical Progress Note from your treating physician indicating that OSA treatment is still effective AND"
+        ]
+      },
+      {
+        "title": "For CPAP/ BIPAP/ APAP",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Sleep_Apnea_OSA.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A copy of the cumulative annual PAP device report which shows actual time used (rather than a report typically generated for insurance providers which only shows if use is greater or less than 4 hours).",
+          "For persons with an established diagnosis of OSA who do not have a recording CPAP, a one-year exception will be allowed to provide a personal statement that they regularly use CPAP and use it before each shift when performing flight or safety duties."
+        ],
+        "more": true
+      },
+      {
+        "title": "For Dental Devices and/or for Positional Devices",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Sleep_Apnea_OSA.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Once Dental Devices with recording / monitoring capability are available, reports must be submitted."
+        ]
+      },
+      {
+        "title": "For Surgery",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_Sleep_Apnea_OSA.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "For successfully treated surgical patients, a statement attesting to the continued absence of OSA symptoms is required."
+        ]
+      },
+      {
+        "title": "Obstructive Sleep Apnea (OSA) Treated Status Report",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/OSA_Treated_Status_Report.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "AIRMAN (Pilot/ATCS). Complete #1 & #2. Sign, date, and take to your physician or healthcare provider who treats your OSA. After completion, bring to your AME for upload into your FAA file.",
+          "If you are the physician or provider treating this individual: Review all clinical data, complete, sign, and date this report, or submit a current, detailed Clinical Progress Note that addresses ALL items below."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-pacemaker",
+    "name": "Pacemaker",
+    "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/pacemaker",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "Protocol for Initial Evaluation of Implanted Pacemaker",
+        "sourceURL": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/pacemaker",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Hospital records. Copies of hospital admission summary medical records pertaining to pacemaker. This includes history and physical, operative report, discharge summary, coronary catheterization or ischemia work up (if performed), and all ECG tracings. Pacemaker information must include the make of the generator and leads, model, and serial number.",
+          {
+            "quote": "Cardiology narrative. A typed narrative or clinical note from your cardiologist detailing your interim and current cardiac condition, functional capacity, medical history, and medications. It must also include:",
+            "sub": [
+              "Evaluation of pacemaker function, programmed pacemaker parameters, exclusion of myopotential inhibition and pacemaker induced hypotension (pacemaker syndrome), elective replacement indicator/end of life (ERI/EOL), and battery voltage.",
+              "Pacemaker Status Summary* (PDF)"
+            ]
+          },
+          "Lab. Hemoglobin A1C and current blood lipid profile to include total cholesterol, HDL, LDL, and triglycerides.",
+          {
+            "quote": "Cardiac monitor. A current Holter monitor or similar evaluation for at least 24-consecutive hours to include select representative tracings. It must list:",
+            "sub": [
+              "Atrial and ventricular ectopic counts/burden;",
+              "Hourly tabular data to include the longest pause duration and counts of all pauses >2.0 or 2.5 seconds;",
+              "Heart rate (max and min), other day-by-day histograms, and frequency graphs; and",
+              "Percentage of time in atrial fibrillation/flutter"
+            ]
+          },
+          "Echo. A current M-mode, 2-dimensional echocardiogram with Doppler.",
+          "Stress test. A current Maximal Graded Exercise Stress Test Requirements (GXT). If a radionuclide stress (RS) or cardiac angiogram (cardiac catheterization) were performed, submit those images and reports. Due to poor image quality, Xeroxed or faxed images will not be accepted.",
+          "*Note: The Pacemaker Status Summary (PDF) is not required, however, it will help to streamline and significantly DECREASE FAA review time."
+        ]
+      },
+      {
+        "title": "PACEMAKER STATUS SUMMARY",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Pacemaker_Status_Summary.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Please take this summary sheet to your cardiologist and have them enter the requested information in the space provided.",
+          "Submit either this summary* or all supporting documentation addressing each item to your AME for upload into your file as Cardiac – Pacemaker Info.",
+          "This Pacemaker Status Summary is NOT required; however, it will help to streamline and significantly DECREASE FAA review time.",
+          "As of 08/25/2021 - Evaluation of Pacemaker Dependency is no longer required for any class."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-cardiac",
+    "name": "Post-cardiac event (e.g., MI, stent, bypass)",
+    "page": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AASI for Coronary Heart Disease (CHD)",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Authorization granted by the FAA",
+          "Coronary Heart Disease (CHD)/ Coronary Artery Disease (CAD) Recertification Status Summary (PDF) – Completed within the past 90 days."
+        ]
+      },
+      {
+        "title": "Coronary Heart Disease (CHD)/ Coronary Artery Disease (CAD) RECERTIFICATION Status Summary",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/CHD_CAD_Recert_Status_Summary.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "To expedite recertification, have your cardiologist complete, sign, and date this status summary. If any “NO*” responses or change in your condition(s), you must also submit a current, detailed Clinical Progress Note addressing ALL items.",
+          "Return the information to your AME for electronic upload to the FAA.",
+          {
+            "quote": "Results of testing performed no more than 90 days before the AME exam",
+            "sub": [
+              "A1c must be submitted even if there is no diagnosis of diabetes."
+            ]
+          },
+          "Current medication list attached OR list all current therapy (medication and dose)",
+          "As of 05/29/24 for routine cases, follow-up stress test is not required.",
+          "If after FAA review it is determined that a stress test is required, this status summary and a current, detailed Clinical Progress Note must be submitted."
+        ]
+      },
+      {
+        "title": "Protocol for Coronary Heart Disease – 1st and 2nd Class and ATCS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_1st-2nd_class.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "After the required recovery period, obtain the following and submit to the FAA. Post-event testing should NOT be obtained until AFTER the recovery period.",
+          "Hospital records. Submit copies of:\n• Admission history & physical (H&P);\n• Operative report, if applicable (CABG, stent, or other procedure performed);\n• Discharge summary from the physician (NOT the discharge instructions/paperwork given to the patient when leaving the hospital); and\n• Coronary catheterization (heart cath) or ischemia work up (if performed). Submit both the images on CD AND the printed report.",
+          "Cardiology narrative. A current evaluation by the cardiologist in the form of a detailed Clinical Progress Note which must include:\n• A detailed summary of the history of any cardiac or co-morbid condition(s);\n• Personal and family medical history including premature heart disease;\n• Current medications, dosage, and side effects (if any);\n• Clinical cardiac and general physical exam findings;\n• Results of any testing performed;\n• Diagnosis;\n• Assessment and plan;\n• Prognosis and Follow-up.\nIt must specifically include:\n• If hospitalization or procedure, include a summary of events that led to the cardiac intervention(s) or treatment;\n• A statement regarding the individual’s functional capacity and if they have been returned to their regular activity;\n• Attempts to meet the guidelines for modifiable risk factors (such as lipid levels, aspirin use, beta-blocker use, and smoking cessation per the American College of Cardiology and American Heart Association); and\n• Prognosis for incapacitation.",
+          "Labs performed no more than 90 days before AME exam\n• Hemoglobin A1c;\n• Lipid profile to include total cholesterol, HDL, LDL, and triglycerides; and\n• INR monthly readings if on warfarin (Jantoven)",
+          "Post-Event Radionuclide stress test (Stress RS) with imaging performed AFTER the event. Submit the report, images on CD in DICOM format (e.g., the “Rest/Stress multi-slice three-axis splash images”), and electrical tracings. Note: A Stress echo cannot take the place of the stress RS for 1st or 2nd class (full or limited). Due to poor image quality, Xeroxed or faxed images will not be accepted.",
+          "Civil Aerospace Medical Institute (CAMI) Limited Certificate Petition. (Informs FAA if you will accept a lower-class medical certificate). It should be submitted regardless of the answer chosen.",
+          "Post-Event Heart Catheterization (Heart cath/cardiac angiography) with imaging. Submit both the report AND actual images on CD.\n• Required for 1st class and for full 2nd class\n• Not required for Limited Second Class or ATCS\n• For new applicants, the post-event cath must have been performed within the last five (5) years.",
+          "To aid in the review process, it is critical that the individual’s full name and date of birth appear on all correspondence and reports."
+        ]
+      },
+      {
+        "title": "Protocol for Coronary Heart Disease (CHD) 3rd Class",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_3rd_class.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Recovery period. There is NO mandatory recovery period per Public Law 114-190 5/2017, but the applicant should be released by the treating physician before obtaining the following evaluations.",
+          "Hospital records. Submit copies of:\n• Admission history & physical (H&P);\n• Operative report, if applicable (CABG, stent, or other procedure performed);\n• Discharge summary from the physician (NOT the discharge instructions/paperwork given to the patient when leaving the hospital). Typically, the patient portal notes or after visit summary (AVS) that can be printed from the electronic medical record are NOT sufficient for pilot medical certification purposes.); and\n• Coronary catheterization (heart cath) or ischemia work up (if performed), submit both the images on CD AND the printed report.",
+          "Cardiology narrative. A current evaluation by your cardiologist in the form of a detailed Clinical Progress Note which must include:\n• A detailed summary of the history of any cardiac or co-morbid condition(s);\n• Personal and family medical history including premature heart disease;\n• Current medications, dosage, and side effects (if any);\n• Clinical cardiac and general physical exam findings;\n• Results of any testing performed;\n• Diagnosis;\n• Assessment and plan;\n• Prognosis and Follow-up.",
+          {
+            "quote": "It must specifically include:",
+            "sub": [
+              "If hospitalization or procedure, include a summary of events that lead to the cardiac intervention(s) or treatment;",
+              "A statement regarding the individual’s functional capacity and if they have been returned to their regular activity;",
+              "Attempts to meet the guidelines for modifiable risk factors (such as lipid levels, aspirin use, beta-blocker use, and smoking cessation per the American College of Cardiology and American Heart Association); and",
+              "Prognosis for incapacitation."
+            ]
+          },
+          "Labs performed no more than 90 days before AME exam\n• Hemoglobin A1c;\n• Lipid profile to include total cholesterol, HDL, LDL, and triglycerides; and\n• INR monthly readings if on warfarin (Jantoven)",
+          "Exercise Stress Test (EST) with electrical tracings performed AFTER the event and within 90 days of the AME exam which meets the Exercise Stress Test (EST) Protocol Requirements. If a radionuclide stress (RS) or cardiac catheterization (cardiac angiogram) were performed, submit those reports. Note: Do not submit imaging on CD unless requested by the FAA.",
+          "To aid in the review process, it is critical that the applicant’s full name and date of birth appear all correspondence and reports. Bring all information to your AME to upload into your FAA record."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-cancer-prostate",
+    "name": "Prostate cancer",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item41/amd/nd/prostatic",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/prostate_cancer",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Prostate Cancer",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/prostate_cancer",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA",
+          "A current status of the medical condition to include any testing deemed necessary",
+          "A current PSA level performed within last 90 days."
+        ]
+      },
+      {
+        "title": "C. Prostate Cancer with Metastatic disease current OR any time in the past OR Recurrence of disease including a biochemical recurrence (BCR) after prostatectomy",
+        "sourceURL": "https://www.faa.gov/ame_guide/app_process/exam_tech/item41/amd/nd/prostatic",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Current status report from oncologist describing treatment plan, how long the condition has been stable, and prognosis",
+          "List of medications and presence or absence of side effects with specific attention to any chemotherapy, steroids, or hormone agents and dates used",
+          "Treatment records including clinic notes or a summary letter describing initial staging, disease course, locations of metastatic disease, and stability",
+          "Operative notes and discharge summary, if applicable",
+          "Pathology report(s), if applicable",
+          "Results of MRI/CT or PET scan reports. (In some cases, the actual CDs will be required in DICOM format for FAA review)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-pe-dvt",
+    "name": "Pulmonary embolism / DVT (anticoagulation)",
+    "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/dvt",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/dvt",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Venous Thromboembolism (VTE) - Deep Venous Thrombosis (DVT), Pulmonary Embolism (PE), and/or Hypercoagulopathies",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/dvt",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A valid Authorization for Special Issuance granted by the FAA",
+          "A summary of the applicant's medical condition since the last FAA medical examination, including a statement regarding any further episodes of VTE (DVT, PE) or other complication of hypercoagulopathy (see below*), future treatment plan, and prognosis",
+          "The name and dosage of all medication(s) used for treatment and/or prevention with comment regarding side effects, if any",
+          "If using Jantoven (warfarin), obtain a minimum of monthly International Normalized Ratio (INR) results for the immediate prior 6 months (see below*)",
+          "If using other types of anticoagulants such as NOAC/DOAC (i.e. Xarelto, Eliquis, Pradaxa, Savaysa, etc.), the airman should obtain a statement from their treating/prescribing physician with details of the underlying condition, tolerance of the medication to include the presence or absence of side effects, any bleeding episodes requiring medical attention, and any occurrence/recurrence of deep vein thrombosis or pulmonary embolism."
+        ]
+      },
+      {
+        "title": "Disease Protocols - Thromboembolic Disease",
+        "sourceURL": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/thromboembolic",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Hospital admission and discharge summary",
+          {
+            "quote": "Current status report including:",
+            "sub": [
+              "Detailed family history of thromboembolic disease",
+              "Neoplastic workup, if clinically indicated",
+              "Any blood clotting disorder (e.g. PT/PTT, Protein S and C, Factor V Leiden)",
+              "If still anticoagulated with warfarin (Jantoven), submit all (no less than monthly) INRs from time of hospital discharge to present"
+            ]
+          },
+          {
+            "quote": "Warfarin (Jantoven): For applicants who are just beginning warfarin (Jantoven) treatment the following is required:",
+            "sub": [
+              "Minimum observation time of 6 weeks after initiation of warfarin therapy;",
+              "Must also meet any required observation time for the underlying condition; AND",
+              "6 INRs, no more frequently than 1 per week"
+            ]
+          },
+          {
+            "quote": "NOAC/DOACs: For applicants who are just beginning treatment with NOAC/DOACs, the following is required:",
+            "sub": [
+              "Minimum observation time of 2 weeks after initiation of therapy; AND",
+              "Must also meet any required observation time for the underlying condition"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-seizure",
+    "name": "Seizure disorder / epilepsy",
+    "page": "https://www.faa.gov/ame_guide/media/Seizures_Epilepsy.pdf",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "SEIZURE",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Seizures_Epilepsy.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A current, detailed neurological evaluation that meets FAA Specifications for Neurologic Evaluation generated from a clinic visit with the treating neurologist no more than 90 days before the AME exam.",
+          "It must specifically include the date of last seizure activity and dates medication discontinued.",
+          {
+            "quote": "*MRI brain performed at any time after the seizure activity started.",
+            "sub": [
+              "If not already performed, a current brain MRI is required.",
+              "Submit BOTH the interpretive report on paper and imaging on CD in DICOM readable format (there must be a file named 'DICOMDIR' in the root directory of the CD-ROM). Please verify the CD will display the images before sending. Retain a copy of all films as a safeguard if lost in the mail."
+            ]
+          },
+          {
+            "quote": "Electroencephalogram (EEG) performed no more than 12 months before the AME exam. It must be sleep-deprived EEG: Awake, asleep, and with provocation (hyperventilation, photic/strobe light).",
+            "sub": [
+              "If not already performed, a current EEG is required.",
+              "Submit any previous EEG(s) available for comparison.",
+              "Submit BOTH the interpretive report on paper and imaging on CD in DICOM readable format (there must be a file named 'DICOMDIR' in the root directory of the CD-ROM). Please verify the CD will display the images before sending. Retain a copy of all films as a safeguard if lost in the mail."
+            ]
+          },
+          "FAA Airman Seizure Questionnaire completed by the applicant."
+        ]
+      },
+      {
+        "title": "EPILEPSY (Seizure Disorder)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Seizures_Epilepsy.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A current, detailed neurological evaluation that meets FAA Specifications for Neurologic Evaluation generated from a clinic visit with the treating neurologist (epileptologist preferred), no more than 90 days before the AME exam.",
+          "It must specifically include the date of last seizure activity and dates medication(s) discontinued.",
+          {
+            "quote": "MRI brain performed at any time after the seizure activity started.",
+            "sub": [
+              "If not already performed, a current brain MRI is required. Submit BOTH the interpretive report on paper and imaging on CD in DICOM readable format (there must be a file named 'DICOMDIR' in the root directory of the CD-ROM). Please verify the CD will display the images before sending. Retain a copy of all films as a safeguard if lost in the mail."
+            ]
+          },
+          {
+            "quote": "Electroencephalogram (EEG) performed no more than 12 months before the AME exam. It must be sleep-deprived EEG: awake, asleep, and with provocation (hyperventilation, photic/strobe light). A 24-hour EEG study is preferred.",
+            "sub": [
+              "If not already performed, a current EEG is required.",
+              "Submit any previous EEG(s) available for comparison."
+            ]
+          },
+          "FAA Airman Seizure Questionnaire completed by the applicant."
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-stroke",
+    "name": "Stroke or TIA",
+    "page": "https://www.faa.gov/ame_guide/media/Stroke-CVA-TIA.pdf",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_CVA-Stroke.pdf",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AASI for Cerebrovascular Disease (CVA/Stroke/TIA)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/AASI_CVA-Stroke.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA",
+          "Annual current, detailed Clinical Progress Note generated from a clinic visit with the treating neurologist no more than 90 days before the AME exam. It must include a detailed interim summary; current medications, dosage, and side effects (if any); physical exam findings; results of all testing performed; diagnosis; assessment and plan (prognosis); and follow-up.",
+          "Brain MRI (report with comparison to prior studies) every 24-months."
+        ],
+        "more": true
+      },
+      {
+        "title": "Cerebrovascular Accident (CVA) or Transient Ischemic Attack (TIA)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Stroke-CVA-TIA.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A detailed neurological evaluation that meets FAA Specifications for Neurologic Evaluation generated from a clinic visit with the treating neurologist no more than 90 days before the AME exam.",
+          {
+            "quote": "Brain MRI performed within the previous 12 months. New imaging may be required after FAA physician review.",
+            "sub": [
+              "Submit the interpretive report on paper and imaging on CD in DICOM readable format (there must be a file named 'DICOMDIR' in the root directory of the CD-ROM). Please verify the CD will display the images before sending. Retain a copy of all films as a safeguard if lost in the mail."
+            ]
+          },
+          {
+            "quote": "Hospital records from the event:",
+            "sub": [
+              "Admission History and Physical",
+              "Hospital discharge summary. (Typically, the patient portal notes or after visit summary (AVS) printed from an electronic medical record are NOT sufficient for pilot medical certification purposes.)",
+              "Emergency Medical Services (EMS)/ambulance run sheet, if applicable",
+              "Hospital consultant report(s) (e.g., neurology, cardiology, internal medicine, or other specialists)",
+              "Lab report(s)",
+              "Operative/procedure report(s), if applicable",
+              "*Radiology report(s). The interpretive report(s) of all diagnostic imaging (CT Scan, MRI, X-ray, ultrasound, or others) performed.",
+              "DO NOT submit miscellaneous hospital records such as flowsheets, nursing notes, physician orders, and medication administration records."
+            ]
+          },
+          {
+            "quote": "Cardiac Monitor",
+            "sub": [
+              "TIA - Results of a current 30-day cardiac event monitor such as a Zio patch or implanted loop recorder (ILR).",
+              "If an implanted cardiac monitor was placed, OR if a cryptogenic stroke, submit a minimum of six (6) months of device reports.",
+              "If ILR is currently implanted, submit data from implantation to the most recent interrogation."
+            ]
+          },
+          {
+            "quote": "Any other testing below, if already performed. New testing should not be obtained for aeromedical purposes until requested by FAA physicians. (See note on next page regarding additional testing.)",
+            "sub": [
+              "*Imaging. Copies of all previous imaging such as CT, MRI, MRA, or other radiological tests",
+              "Carotid ultrasound such as post procedure carotid endarterectomy. A carotid ultrasound is NOT acceptable in place of an MRA or CTA",
+              "Transthoracic echocardiogram (TTE)",
+              "Cardiovascular Evaluation (CVE). (This may be found in hospital records as many are completed during the hospital stay.)",
+              "Stress test",
+              "Holter monitors performed since the event."
+            ]
+          }
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-hims",
+    "name": "Substance or alcohol dependence (HIMS)",
+    "page": "https://www.faa.gov/ame_guide/abuse_dep",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "HIMS AME Checklist - Drug and Alcohol Monitoring Recertification",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/HIMS_Drug_Alcohol_Monitoring_Checklist.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "TREATING PSYCHIATRIST REPORT or HIMS PSYCHIATRIST REPORT: Required EVERY 12 months for ALL CLASSES unless a different time interval is specifically stated in the Authorization Letter.",
+          "AFTERCARE COUNSELOR REPORTS: For 1st and 2nd class: Required every 3 months; 3rd class: Per Authorization Letter",
+          "PEER PILOT REPORTS: Required monthly for commercial pilots holding first- or second-class certificates (N/A for third-class)",
+          "ADDITIONAL REPORTS: Required ONLY when specified by the Authorization letter"
+        ],
+        "more": true
+      },
+      {
+        "title": "FAA CERTIFICATION AID – Drug and Alcohol Monitoring Recertification",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Additional information such as clinic notes or explanations should also be submitted as needed.",
+          "All reports must be CURRENT (within the last 90 days) for FAA purposes."
+        ]
+      },
+      {
+        "title": "FAA CERTIFICATION AID – Drug and Alcohol Monitoring Recertification: DRUG OR ALCOHOL TESTING",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "(Urine EtG/EtS, PEth testing or a mobile alcohol monitoring system are preferred.)",
+          "At a minimum, frequency must be 14 tests over a 12-month period (can be more frequent at AME discretion)."
+        ],
+        "more": true
+      },
+      {
+        "title": "FAA CERTIFICATION AID – Drug and Alcohol Monitoring Recertification: PSYCHIATRIST HISTORY REPORT",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Summarize clinical findings and status of how the airman is doing.",
+          "Note any clinical concerns or changes in treatment plan.",
+          "Recommendations for any additional treatment or monitoring, if applicable.",
+          "Agreement to immediately notify the FAA or AME (at 405-954-4821) if there are any changes in the airman’s condition.",
+          "Interval treatment records if any, such as clinic or hospital notes, should also be submitted."
+        ]
+      },
+      {
+        "title": "FAA CERTIFICATION AID – Drug and Alcohol Monitoring Recertification: GROUP AFTERCARE COUNSELOR (ex: AA meeting)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Progress report should include: 1. If the airman is continuing to participate in abstinence-based sobriety. 2. How often the airman attends (weekly or per Authorization Letter). 3. Agreement to immediately notify the HIMS AME if there are any changes or deterioration in the airman’s condition."
+        ]
+      },
+      {
+        "title": "FAA CERTIFICATION AID – Drug and Alcohol Monitoring Recertification: CHIEF PILOT, FLIGHT OPERATION SUPERVISOR, OR AIRLINE MANAGEMENT DESIGNEE",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Monthly reports must address: 1. The airman’s performance and competence. 2. Crew interaction. 3. Mood (if available). 4. Presence or absence of any other concerns."
+        ]
+      },
+      {
+        "title": "FAA CERTIFICATION AID – Drug and Alcohol Monitoring Recertification: PEER PILOT (Ex: from employer, ALPA, etc.)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Must attest to the best of their knowledge, the airman’s continued total abstinence from drugs or alcohol."
+        ]
+      },
+      {
+        "title": "FAA CERTIFICATION AID – Drug and Alcohol Monitoring Recertification: ADDITIONAL PROVIDERS",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Additional reports for HIMS or any other condition noted in Authorization Letter",
+          "Varies. See the airman’s Authorization Letter. Include any applicable psychotherapy notes, therapist follow up reports, social worker reports, AA sponsor contact, etc.",
+          "If the airman has other non-SSRI conditions that require a special issuance, those reports should also be submitted according to the Authorization Letter."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-thyroid",
+    "name": "Thyroid disease",
+    "page": "https://www.faa.gov/ame_guide/media/Hypothryroid_Hypothyroidism.pdf",
+    "letter": {
+      "quote": "The Authorization letter is accompanied by attachments that specify the information that treating physician(s) must provide for the re-issuance determination.",
+      "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/hypothyroidism",
+      "checked": "2026-11-12"
+    },
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Hypothyroidism",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/hypothyroidism",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA;",
+          "The name and dosage of medication(s) used for treatment and/or prevention with comment regarding side effects;",
+          "A statement regarding any other associated problems, such as cardiac or visual;",
+          "A statement regarding the current thyroid stimulating hormone (TSH) level performed within last 90 days."
+        ]
+      },
+      {
+        "title": "AME Assisted - All Classes - Hyperthyroidism",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/hyperthyroidism",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA current statement of the condition since last FAA medical examination;",
+          "The name and dosage of medication(s) used for treatment and/or prevention with comment regarding side effects;",
+          "Current thyroid function studies performed within last 90 days."
+        ]
+      },
+      {
+        "title": "HYPOTHYROID or HYPOTHYROIDISM (Including Hashimoto's Disease)",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Hypothryroid_Hypothyroidism.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A current, detailed Clinical Progress Note generated from a clinic visit with the treating physician performed no more than 90 days before the AME exam. (Diagnosis of Central Hypothyroidism should be evaluated by an endocrinologist.) It must include a detailed summary of the history of the condition; current medications, dosage, and side effects (if any); physical exam findings; results of any testing performed; diagnosis; assessment; plan (prognosis); and follow-up.",
+          "Any other testing deemed clinically necessary by the treating physician."
+        ],
+        "more": true
+      }
+    ]
+  },
+  {
+    "id": "si-tbi",
+    "name": "Traumatic brain injury",
+    "page": "https://www.faa.gov/ame_guide/media/Head-Injury.pdf",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "HEAD INJURY or BRAIN INJURY: B2. Brain injury Within the past four (4) years",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Head-Injury.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "After a 6-month recovery period obtain the following evaluation(s) and submit for FAA review:",
+          "A current, detailed Clinical Progress Note generated from a clinic visit with the treating physician or neurologist no more than 90 days before the AME exam. It must include a detailed summary of the history of the condition; current medications, dosage, and side effects (if any); physical exam findings; results of any testing performed; diagnosis; assessment and plan (prognosis); and follow-up.",
+          {
+            "quote": "It must specifically include:",
+            "sub": [
+              "Any evidence of seizure;",
+              "Any post-traumatic amnesia or mental fogginess (incomplete memory of the incident, does not recall the impact/crash, etc.)",
+              "Any post-concussive symptoms such as headaches, dizziness, irritability;",
+              "Any changes in vision;",
+              "Any focal deficit;",
+              "Any imaging performed and if (CT/MRI) was negative;",
+              "Any clinical indication for further brain imaging; initial CT head/face negative."
+            ]
+          },
+          {
+            "quote": "Records from any hospitalization(s) for this condition to include:",
+            "sub": [
+              "Admission History and Physical;",
+              "Hospital discharge summary. (Typically, the patient portal notes or After Visit Summary [AVS] printed from the electronic medical record are NOT sufficient for pilot medical certification purposes.);",
+              "Hospital consultant report(s) (such as neurology, cardiology, internal medicine, or other specialists);",
+              "Operative/procedure report(s);",
+              "Pathology report(s);",
+              "Radiology reports*. The interpretive report(s) of all diagnostic imaging performed (CT scan, MRI, X-ray, ultrasound, or others);",
+              "Lab report(s) including all drug or alcohol testing performed; and",
+              "Emergency Medical Services (EMS)/ambulance run sheet.",
+              "DO NOT submit miscellaneous hospital records such as flowsheets, nursing notes, physician orders, or medication administration records."
+            ]
+          }
+        ],
+        "more": true
+      },
+      {
+        "title": "HEAD INJURY or BRAIN INJURY: C. Moderate BRAIN Injury",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Head-Injury.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "A current, detailed neurological evaluation, in accordance with the FAA Specifications for Neurologic Evaluation, that is generated from a clinic visit with the treating neurologist no more than 90 days before the AME exam.",
+          "It must specifically include if there is (or is NOT) any concern or history of seizure(s).",
+          "EEG only if a seizure occurred and an EEG was obtained, submit results. EEG* Sleep-deprived and sleep awake state with activating procedures (with provocation) performed at the time of event or later.",
+          "A Neuropsychological evaluation that meets FAA Specifications for Neuropsychological Evaluations for Potential Neurocognitive Impairment from a clinic visit with the treating neuropsychologist no more than 90 days before the AME exam.",
+          "MRI brain with hemosiderin-sensitive sequences (with contrast as clinically appropriate) performed any time after the event.",
+          {
+            "quote": "Records from any hospitalization(s) for this condition to include:",
+            "sub": [
+              "Admission History and Physical.",
+              "Hospital discharge summary. (Typically, the patient portal notes or After Visit Summary [AVS] printed from the electronic medical record are NOT sufficient for pilot medical certification purposes.).",
+              "Hospital consultant report(s) (such as neurology, cardiology, internal medicine, or other specialists).",
+              "Operative/procedure report(s).",
+              "Pathology report(s).",
+              "Radiology reports. The interpretive report(s) of all diagnostic imaging (CT scan, MRI, X-ray, ultrasound, or others) performed. For all imaging, submit the interpretive report(s) AND the actual images on CD in DICOM readable format.",
+              "Lab report(s) including all drug or alcohol testing performed.",
+              "Emergency Medical Services (EMS)/ambulance run sheet.",
+              "DO NOT submit miscellaneous hospital records such as flowsheets, nursing notes, physician orders, or medication administration records."
+            ]
+          },
+          "Progress notes from ALL clinic follow-up visits related to this condition.",
+          "Other tests already performed or clinically indicated."
+        ],
+        "more": true
+      },
+      {
+        "title": "HEAD INJURY or BRAIN INJURY: D. Severe BRAIN Injury",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/Head-Injury.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          {
+            "quote": "After a four (4)-year recovery period submit for FAA review:",
+            "sub": [
+              "All items in Row C"
+            ]
+          },
+          "Note: MRI or MRA/CTA are required. If not performed during the initial management or monitoring of the condition, new testing must be obtained.",
+          "For all imaging, submit the interpretive report(s) AND the actual images on CD in DICOM readable format."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "si-dm2",
+    "name": "Type 2 Diabetes on oral medication",
+    "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item48/amd/diabetes",
+    "letter": null,
+    "blocks": [
+      {
+        "title": "AME Assisted - All Classes - Diabetes Mellitus - Type II, Medication Controlled (Not Insulin)",
+        "sourceURL": "https://www.faa.gov/ame_guide/special_iss/all_classes/diabetes",
+        "checked": "2026-11-12",
+        "quotes": [
+          "An Authorization granted by the FAA AND either A Diabetes or Hyperglycemia on Medications Status Report (PDF) OR A current status report from the physician treating the airman's diabetes, including: A statement attesting that the airman is maintaining his or her diabetic diet; A statement regarding any diabetic symptomatology, including any history of hypoglycemic events and any cardiovascular, renal, neurologic, or ophthalmologic complications; and The results of a current HgA1c level performed within last 30 days."
+        ]
+      },
+      {
+        "title": "Protocol for Diabetes Mellitus Treated with Any Medication Other Than Insulin: INITIAL AUTHORIZATION",
+        "sourceURL": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/diabetes_med",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Applicant must submit either: Diabetes or Hyperglycemia on Medications Status Report; OR A current, detailed Clinical Progress Note generated from a clinic visit with the treating physician or endocrinologist no more than 90 days prior to the AME exam. It must include: A detailed summary of the history of the condition; Treatments and outcomes; Current medications, dosage, and side effects (if any); Physical exam findings; Results of any testing performed; Diagnosis; Assessment; Plan (prognosis); and Follow-up.",
+          "The Clinical Progress Note must also specifically include: If there is any evidence of progressive diabetes-induced end organ disease (cardiac, neurological, ophthalmological, peripheral neuropathy, or renal disease); and If there are any hypoglycemia episodes in the past (one) year.",
+          "Current Hemoglobin A1C lab test performed no more than 90 days* prior to the AME exam (and 30 days after medication change). *Note: This was previously 30 days."
+        ]
+      },
+      {
+        "title": "Protocol for Diabetes Mellitus Treated with Any Medication Other Than Insulin: SUBSEQUENT EXAMS",
+        "sourceURL": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/diabetes_med",
+        "checked": "2026-11-12",
+        "quotes": [
+          "See the individual’s Authorization for Special issuance.",
+          "Follow-up evaluation by the treating physician is required annually.",
+          "The applicant must submit either: Diabetes or Hyperglycemia on Medications Status Report; OR A current Detailed Clinical Progress Note from the treating physician, which contains the above information."
+        ]
+      },
+      {
+        "title": "DIABETES or HYPERGLYCEMIA ON MEDICATIONS STATUS REPORT",
+        "sourceURL": "https://www.faa.gov/ame_guide/media/diabetes_or_hyperglycemia_on_meds_report.pdf",
+        "checked": "2026-11-12",
+        "quotes": [
+          "Please have the provider who treats your diabetes enter the information in the space below.",
+          "Return the completed status report to your AME for upload into your FAA file.",
+          "(A1C lab value must be taken more than 30 days after medication change and within 90 days of re/certification)",
+          "If YES is circled on any of the questions below, please attach narrative, tests, etc."
+        ]
+      }
+    ]
+  }
+]

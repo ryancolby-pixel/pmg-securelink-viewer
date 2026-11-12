@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>FAA documents for a Special Issuance</title>
+<style>
+:root { color-scheme: light dark; --fg: #1d1d1f; --muted: #5f6368; --bg: #f5f5f7; --card: #ffffff; --accent: #1f6fd1; --rule: #d9dce1; --field: #ffffff; }
+@media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --card: #1c1c1e; --accent: #4a90e2; --rule: #3a3a3c; --field: #2c2c2e; } }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
+.card { background: var(--card); border-radius: 16px; padding: 28px 24px; margin: 0 0 16px; }
+h1, h2 { font-size: 24px; line-height: 1.25; margin: 0 0 12px; }
+p { margin: 0 0 12px; }
+a { color: var(--accent); }
+.quiet { color: var(--muted); font-size: 15px; }
+label { display: block; font-weight: 600; margin: 16px 0 6px; }
+label .quiet { font-weight: 400; }
+select, input { display: block; width: 100%; font: inherit; color: var(--fg); background: var(--field); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 8px; }
+button { font: inherit; font-weight: 600; color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 22px; cursor: pointer; }
+button.secondary { color: var(--accent); background: transparent; }
+button:disabled { opacity: 0.5; cursor: default; }
+#linkbox { margin: 8px 0 12px; font-size: 15px; }
+.sendto { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; margin: 0 0 16px; }
+.sendto strong { word-break: break-word; }
+.letter { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin: 0 0 20px; }
+.block { margin: 0 0 22px; }
+.block h3 { font-size: 15px; line-height: 1.35; font-weight: 600; color: var(--muted); margin: 0 0 8px; overflow-wrap: anywhere; }
+ul.quotes { margin: 0 0 8px; padding: 0 0 0 20px; }
+ul.quotes > li { margin: 0 0 8px; padding-left: 2px; white-space: pre-line; overflow-wrap: anywhere; }
+ul.sub { margin: 6px 0 0; padding: 0 0 0 22px; list-style: circle; }
+ul.sub > li { margin: 0 0 4px; }
+.more { color: var(--muted); font-size: 14px; margin: 0 0 6px; }
+.q { margin: 0 0 6px; }
+.meta { color: var(--muted); font-size: 14px; margin: 0; }
+.url { display: none; }
+footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 0 0; }
+@media (max-width: 480px) {
+  main { padding: 24px 16px; }
+  .card { padding: 20px 16px; }
+  .actions button { flex: 1 1 100%; }
+}
+@media print {
+  :root { --fg: #000; --muted: #444; --bg: #fff; --card: #fff; --accent: #000; --rule: #999; }
+  body { font-size: 11pt; line-height: 1.4; }
+  main { max-width: none; padding: 0; }
+  .card { padding: 0; margin: 0; border-radius: 0; }
+  .noprint, button, footer { display: none !important; }
+  h2 { font-size: 16pt; }
+  .block h3 { font-size: 10pt; color: #000; break-after: avoid; }
+  ul.quotes > li, ul.sub > li { break-inside: avoid; margin-bottom: 4pt; }
+  a { color: #000; text-decoration: none; }
+  .url { display: block; font-size: 8.5pt; word-break: break-all; }
+  .printonly { display: block !important; }
+}
+.printonly { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <section id="loading" class="card"><p>Loading the list...</p></section>
+
+  <section id="office" class="card noprint" hidden>
+    <h1>FAA documents for a Special Issuance pilot</h1>
+    <p class="quiet">Pick the pilot's condition. You'll see what the FAA's published pages list for it, quoted word for word, with a link to each source. Print it, or send the pilot a link.</p>
+    <label for="cond">Pilot's condition</label>
+    <select id="cond"><option value="">Choose a condition</option></select>
+    <div class="actions">
+      <button id="print" type="button" disabled>Print</button>
+      <button id="copy" type="button" class="secondary" disabled>Copy link for the pilot</button>
+    </div>
+    <p id="copied" class="quiet" aria-live="polite"></p>
+    <input id="linkbox" type="text" readonly hidden aria-label="Link for the pilot">
+    <p class="quiet">The link carries only the condition, after the # sign. Browsers don't send that part to our server, so we never see it.</p>
+  </section>
+
+  <article id="sheet" class="card" hidden>
+    <h2 id="title"></h2>
+    <p class="quiet">In the FAA's own words, from its published pages.</p>
+    <p id="asknote" class="sendto" hidden>Ask your AME's office where to send these.</p>
+    <div class="letter" id="letter" hidden>
+      <p id="letterlead"></p>
+      <p class="q" id="letterq"></p>
+      <p class="meta" id="lettermeta"></p>
+    </div>
+    <div id="blocks"></div>
+    <p class="quiet" id="pageline"></p>
+    <p class="quiet">This is the FAA's published wording, not medical or certification advice, and not a review of any pilot's case.</p>
+    <p class="quiet printonly">Free from Pilot Medical Guardian.</p>
+    <div id="pilotprint" class="actions noprint" hidden><button id="print2" type="button">Print</button></div>
+  </article>
+
+  <p id="app" class="card quiet noprint" hidden>With Guardian Pro, the Pilot Medical Guardian app can send these to your AME as one encrypted packet. <a href="https://apps.apple.com/app/id6772534988" target="_blank" rel="noopener noreferrer">Get it on the App Store</a></p>
+
+  <section id="bad" class="card" hidden>
+    <h1>This link looks incomplete</h1>
+    <p>Copy the whole link, or ask your AME's office to send it again.</p>
+  </section>
+
+  <section id="error" class="card" hidden>
+    <h1>The list didn't load</h1>
+    <p>Check your connection and reload this page.</p>
+  </section>
+
+  <footer id="foot" hidden>Free from Pilot Medical Guardian. This page doesn't send what you pick anywhere.</footer>
+</main>
+<script>
+// The AME request sheet. Office view: pick a condition, print or copy a link.
+// Pilot view: the link's #fragment (never sent to a server) carries only the condition id. No contact field
+// (Ryan 11/12: removed, so nobody can make a link on our address that tells a pilot where to send records).
+// Everything shown from the data is the FAA's words.
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  const views = ["loading", "office", "sheet", "app", "bad", "error", "foot"];
+  const show = (...ids) => { for (const v of views) $(v).hidden = !ids.includes(v); };
+  const FAA = /^https:\/\/(www\.faa\.gov|www\.ecfr\.gov)\//;
+  const day = (d) => new Date(d + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
+  const quote = (q) => "\u201C" + q + "\u201D";
+  const meta = (url, checked) => {
+    const p = el("p", "meta"), a = el("a", null, "Source: FAA");
+    if (FAA.test(url)) { a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+    p.append(a, " \u00B7 Checked " + day(checked), el("span", "url", url));
+    return p;
+  };
+
+  let data;
+  try {
+    const r = await fetch("/sheet/sheet-data.json", { cache: "no-cache" });
+    if (!r.ok) throw new Error("load");
+    data = await r.json();
+  } catch { return show("error"); }
+  const byId = new Map(data.conditions.map((c) => [c.id, c]));
+
+  function render(c, pilot) {
+    $("title").textContent = "FAA documents for " + c.name;
+    // The letter line only when the curated list has the FAA's letter sentence for this condition (c.letter).
+    $("letter").hidden = !c.letter;
+    if (c.letter) {
+      $("letterlead").textContent = "About the pilot's FAA Authorization letter, the FAA says:";
+      $("letterq").textContent = quote(c.letter.quote);
+      $("lettermeta").replaceWith(Object.assign(meta(c.letter.sourceURL, c.letter.checked), { id: "lettermeta" }));
+    }
+    // One block per FAA document: its own heading, its words in the FAA's order, its source and check date.
+    // A quote is a string, or {quote, sub} for an FAA list item whose sub-items sit indented under it.
+    // "more" adds our own line (not FAA words) saying the document lists more than the block quotes.
+    const box = $("blocks");
+    box.replaceChildren();
+    for (const b of c.blocks) {
+      const sec = el("section", "block"), ul = el("ul", "quotes");
+      for (const q of b.quotes) {
+        if (typeof q === "string") { ul.append(el("li", null, quote(q))); continue; }
+        const li = el("li", null, quote(q.quote)), sub = el("ul", "sub");
+        for (const s of Array.isArray(q.sub) ? q.sub : []) sub.append(el("li", null, quote(s)));
+        if (sub.childElementCount) li.append(sub);
+        ul.append(li);
+      }
+      sec.append(el("h3", null, b.title), ul);
+      if (b.more === true) {
+        const p = el("p", "more"), a = el("a", null, "Read it in full on the FAA's page");
+        if (FAA.test(b.sourceURL)) { a.href = b.sourceURL; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+        p.append("This FAA page lists more than is quoted here. ", a, ".");
+        sec.append(p);
+      }
+      sec.append(meta(b.sourceURL, b.checked));
+      box.append(sec);
+    }
+    const page = $("pageline"), a = el("a", null, "the FAA's page for this condition");
+    if (FAA.test(c.page)) { a.href = c.page; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+    page.replaceChildren("Not every word on the FAA's page is quoted here. Read ", a, ".", el("span", "url", c.page));
+    $("asknote").hidden = !pilot;
+    $("pilotprint").hidden = !pilot;
+  }
+
+  function office() {
+    const sel = $("cond");
+    if (sel.options.length === 1) for (const c of data.conditions) sel.append(new Option(c.name, c.id));
+    const update = () => {
+      const c = byId.get(sel.value);
+      $("print").disabled = $("copy").disabled = !c;
+      $("copied").textContent = "";
+      $("linkbox").hidden = true;
+      if (c) { render(c, false); show("office", "sheet", "foot"); }
+      else show("office", "foot");
+    };
+    sel.onchange = update;
+    $("print").onclick = () => window.print();
+    $("copy").onclick = async () => {
+      const p = new URLSearchParams({ for: "pilot", c: sel.value });
+      const link = location.origin + location.pathname + "#" + p.toString();
+      try {
+        await navigator.clipboard.writeText(link);
+        $("copied").textContent = "Link copied. Paste it into an email or text to the pilot.";
+      } catch {
+        $("copied").textContent = "Copy this link and send it to the pilot:";
+        $("linkbox").value = link;
+        $("linkbox").hidden = false;
+        $("linkbox").select();
+      }
+    };
+    update();
+  }
+
+  function route() {
+    const p = new URLSearchParams(location.hash.slice(1));
+    if (p.get("for") !== "pilot") return office();
+    const c = byId.get(p.get("c") || "");
+    if (!c) return show("bad", "foot");
+    render(c, true);
+    show("sheet", "app", "foot");
+  }
+  $("print2").onclick = () => window.print();
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
+</body>
+</html>
