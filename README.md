@@ -16,14 +16,14 @@ The live page is at `/r` on the host in the link (the part before the `#`):
 
 It should print the same hash as `viewer.html` in SHA256SUMS:
 
-    5256d46bb6c303e9ccabbcb288ac1dccf523dd38cfdd4a722dde2d5f1417177d
+    8d12dbff795d45eb8a58b5e47b5819308cc40a58a3362a52ce4980bb741f3ad3
 
 ## What's in it
 
-- `viewer.html`: the page exactly as the server sends it (18222 bytes). Its Content-Security-Policy allows only
+- `viewer.html`: the page exactly as the server sends it (22579 bytes). Its Content-Security-Policy allows only
   the inline script and style with these hashes, so the browser runs nothing else:
-  - script `sha256-V5kWq9O8VkZN/TWJpnqMpHPhr6oOekFMLG0jv0n4VTU=`
-  - style `sha256-l2hI/xQOlHT0xyn+hzUIBSKWKmL7QAlVR2kYN7igPGk=`
+  - script `sha256-OX8LQmNDtZVnt5Ml3B7l/rGHQgXqawZqDoOr5eG8pIo=`
+  - style `sha256-/kOpFTaGpll6jpMvmpwRq4lYqAdxuA5DeybwzO6jSoU=`
 - `source/`: what it's built from. `build-viewer.mjs` puts `pmgl.mjs` (the file format: AES-256-GCM in 4 MiB chunks),
   `viewer.js` and `viewer.css` into `viewer.template.html`.
 
@@ -35,10 +35,10 @@ short-lived download address) and to the storage address that returns.
 `/sheet` on the same host is a free list of the FAA's own published documents for each Special Issuance condition,
 quoted word for word, with a link to each FAA source. It holds no pilot data.
 
-- `sheet/index.html`: the page exactly as the server sends it (20367 bytes). Its Content-Security-Policy
+- `sheet/index.html`: the page exactly as the server sends it (21621 bytes). Its Content-Security-Policy
   allows only the inline script and style with these hashes:
-  - script `sha256-uCPf6Imp6XuSNGE5m7YpFzSJtZIEMSEn3qCZ/zBMNpI=`
-  - style `sha256-ASfx38J8+1JboS5OiS0Prq5aRaiNplRQgyZ+eFQlUlE=`
+  - script `sha256-E6cpGRlqerddyUMTPLd+kKq/CLBivqw9VrBOBscnSRM=`
+  - style `sha256-wEzZMsP+Jm1hUrnbpLwDqO3xo3kF+QOr/1hEvbko7iU=`
 - `sheet/sheet-data.json`: the list, exactly as the server sends it at `/sheet/sheet-data.json` (98124 bytes).
   The quotes are the FAA's, so they keep the FAA's own punctuation.
 - `sheet/sheet-links.json`: each condition's name and the links to its FAA pages, with no FAA words, exactly as the
@@ -64,7 +64,7 @@ To check it, compare the live files with SHA256SUMS:
 
 They should print:
 
-    b41255b21d2b2de8590d96a9adfaca03eaa2c26e73ddd0d395d39114aeea9ad3  sheet/index.html
+    451589714d59e1e65b669ea69521c4ab21fd87c651a21b010599b3710e006ad4  sheet/index.html
     7bf3fec4fdb51c5a6b174b711f6461b7409e7e4bb861236c55e401080c158ddb  sheet/sheet-data.json
     872ff20300f0c3b907e1b7701128c0b00593ee7fc43c8db111c82bddd17d0152  sheet/sheet-links.json
 

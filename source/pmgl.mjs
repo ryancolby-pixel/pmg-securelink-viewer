@@ -55,6 +55,26 @@ export async function pmglEncrypt(rawKey, plaintext, prefix = crypto.getRandomVa
   return pmglCat(...parts);
 }
 
+/// "Require a code" (SecureLink/README.md): the 6-digit code the pilot reads to the AME, mixed with the link key K.
+/// fileKey encrypts the PDF instead of K; verifier (base64url, no padding, 43 chars) is what the server checks. The
+/// code itself never leaves the browser. salt = "pmgl-code-v1:" + code; HKDF-SHA256 with two different info strings.
+export function pmglB64url(bytes) {
+  let s = "";
+  for (const b of bytes) s += String.fromCharCode(b);
+  return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+export async function pmglCodeKeys(rawK, code) {
+  if (rawK.length !== 32 || !/^[0-9]{6}$/.test(code)) throw new Error("format");
+  const enc = new TextEncoder();
+  const ikm = await crypto.subtle.importKey("raw", rawK, "HKDF", false, ["deriveBits"]);
+  const salt = enc.encode("pmgl-code-v1:" + code);
+  const derive = async (info) => new Uint8Array(await crypto.subtle.deriveBits(
+    { name: "HKDF", hash: "SHA-256", salt, info: enc.encode(info) }, ikm, 256));
+  const fileKey = await derive("pmgl file key");
+  const verifier = pmglB64url(await derive("pmgl code verifier"));
+  return { fileKey, verifier };
+}
+
 /// Streaming decryptor: push() network pieces as they arrive (returns finished plaintext chunks), then finish().
 /// Holds at most one chunk plus one network piece, so an 80 MB file never needs two full copies in memory.
 export class PmglDecryptor {

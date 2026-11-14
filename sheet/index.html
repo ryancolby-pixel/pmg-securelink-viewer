@@ -46,6 +46,8 @@ button.secondary { color: var(--accent); background: transparent; }
 button.secondary:hover:not(:disabled) { color: #fff; }
 button:disabled { opacity: 0.45; cursor: default; }
 #copied:empty { display: none; }
+.actions a.btn { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; font-weight: 600; color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 8px; padding: 11px 22px; min-height: 46px; text-decoration: none; }
+.actions a.btn:hover { color: #fff; background: var(--accent-hover); border-color: var(--accent-hover); }
 #linkbox { margin: 8px 0 12px; font-size: 15px; }
 .privacy { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px; }
 
@@ -89,7 +91,7 @@ footer { color: var(--faint); font-size: 13px; text-align: center; padding: 8px 
   main { padding-top: 20px; }
   .card { padding: 22px 16px; }
   .tag { display: none; }
-  .actions button { flex: 1 1 100%; }
+  .actions button, .actions a.btn { flex: 1 1 100%; }
   .block h3, .block > .body { padding-left: 12px; padding-right: 12px; }
 }
 @media print {
@@ -181,7 +183,8 @@ footer { color: var(--faint); font-size: 13px; text-align: center; padding: 8px 
       <p class="quiet" id="closingline">This is the FAA's published wording, not medical or certification advice, and not a review of any pilot's case.</p>
       <p class="quiet printonly">Free from Pilot Medical Guardian.</p>
     </div>
-    <div id="pilotprint" class="actions noprint" hidden><button id="print2" type="button">Print</button></div>
+    <div id="pilotprint" class="actions noprint" hidden><button id="print2" type="button">Print</button><a id="openapp" class="btn" hidden>Open in the app</a></div>
+    <p id="openappnote" class="quiet noprint" hidden>Opens Pilot Medical Guardian if it is installed on this iPhone, iPad or Mac.</p>
   </article>
 
   <section id="app" class="card app noprint" hidden><p class="quiet">With Guardian Pro, the Pilot Medical Guardian app can send these to your AME as one encrypted packet. <a href="https://apps.apple.com/app/id6772534988" target="_blank" rel="noopener noreferrer">Get it on the App Store</a></p></section>
@@ -209,6 +212,7 @@ footer { color: var(--faint); font-size: 13px; text-align: center; padding: 8px 
   const views = ["loading", "office", "preview", "sheet", "app", "bad", "error", "foot"];
   const show = (...ids) => { for (const v of views) $(v).hidden = !ids.includes(v); };
   const FAA = /^https:\/\/(www\.faa\.gov|www\.ecfr\.gov)\//;
+  const SI_ID = /^si-[a-z0-9-]+$/;   // the app's own Special Issuance checklist ids
   const day = (d) => new Date(d + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
   const quote = (q) => "\u201C" + q + "\u201D";
@@ -353,6 +357,13 @@ footer { color: var(--faint); font-size: 13px; text-align: center; padding: 8px 
     const c = byId.get(p.get("c") || "");
     if (!c) { document.title = TITLE; return show("bad", "foot"); }
     render(c, true);
+    // Opens the pilot's app on this condition's FAA checklist (pmg://si). Only a known condition's own id goes in it.
+    // Shown only on Apple devices (iPadOS reports itself as a Mac), where the app can be installed; elsewhere the
+    // link would do nothing. The App Store link below covers getting the app.
+    const appleDevice = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+    const showApp = appleDevice && SI_ID.test(c.id);
+    $("openapp").hidden = $("openappnote").hidden = !showApp;
+    if (showApp) $("openapp").href = "pmg://si?faa=" + c.id;
     stamp();
     show("sheet", "app", "foot");
   }

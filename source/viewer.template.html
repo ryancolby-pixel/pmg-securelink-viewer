@@ -52,6 +52,12 @@
       <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3 5.5 h14 v9 h-14 z M3 5.5 l7 5 l7 -5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
       <span>Not expecting this? Check with the pilot before you open the file.</span>
     </p>
+    <div class="code" id="codebox" hidden>
+      <label for="code">Code from the pilot</label>
+      <input id="code" type="text" inputmode="numeric" autocomplete="off" maxlength="7" spellcheck="false" aria-describedby="codehint codeerr">
+      <p class="code-hint" id="codehint">The pilot gives you this 6-digit code separately from the link.</p>
+      <p class="code-err" id="codeerr" aria-live="polite"></p>
+    </div>
     <button id="download" type="button">
       <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M10 3 V13 M5.5 8.5 L10 13 L14.5 8.5 M4 16.5 H16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>Download PDF</span>
@@ -80,6 +86,16 @@
   <section id="gone" class="card" hidden>
     <h1>This link isn't working</h1>
     <p>It may have expired or been stopped. Ask the pilot to send a new one.</p>
+  </section>
+
+  <section id="locked" class="card" hidden>
+    <h1>This link has stopped working</h1>
+    <p>The code was entered wrong too many times, so the file was deleted. Ask the pilot to send a new link.</p>
+  </section>
+
+  <section id="limit" class="card" hidden>
+    <h1>This link can't be used again</h1>
+    <p>This link has been downloaded the most times it allows. Ask the pilot to send a new one.</p>
   </section>
 
   <section id="incomplete" class="card" hidden>
