@@ -6,67 +6,144 @@
 <meta name="referrer" content="no-referrer">
 <title>FAA documents for a Special Issuance</title>
 <style>
-:root { color-scheme: light dark; --fg: #1d1d1f; --muted: #5f6368; --bg: #f5f5f7; --card: #ffffff; --accent: #1f6fd1; --rule: #d9dce1; --field: #ffffff; }
-@media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --card: #1c1c1e; --accent: #4a90e2; --rule: #3a3a3c; --field: #2c2c2e; } }
+:root {
+  color-scheme: light dark;
+  --fg: #1b2433; --muted: #5a6577; --faint: #7b8494; --bg: #f3f5f8; --card: #ffffff; --rule: #dde2ea; --soft: #f7f9fc;
+  --accent: #1a56b8; --accent-hover: #164a9f; --bar: #ffffff; --field: #ffffff; --quote: #c9d3e3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e8ecf2; --muted: #a3acba; --faint: #858e9c; --bg: #0f1318; --card: #181d24; --rule: #2a313b; --soft: #1d232b;
+    --accent: #4d8ef0; --accent-hover: #6aa1f3; --bar: #141920; --field: #12171d; --quote: #3a4656;
+  }
+}
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
-.card { background: var(--card); border-radius: 16px; padding: 28px 24px; margin: 0 0 16px; }
-h1, h2 { font-size: 24px; line-height: 1.25; margin: 0 0 12px; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 p { margin: 0 0 12px; }
-a { color: var(--accent); }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.bar { background: var(--bar); border-bottom: 1px solid var(--rule); }
+.bar-in { max-width: 760px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; gap: 10px; }
+.mark { flex: none; border-radius: 7px; }
+.brand { font-weight: 650; font-size: 16px; letter-spacing: -0.01em; }
+.tag { margin-left: auto; color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 8px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 28px; margin: 0 0 16px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04); }
+.eyebrow { color: var(--muted); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 6px; }
+h1, h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 10px; }
 .quiet { color: var(--muted); font-size: 15px; }
-label { display: block; font-weight: 600; margin: 16px 0 6px; }
-label .quiet { font-weight: 400; }
-select, input { display: block; width: 100%; font: inherit; color: var(--fg); background: var(--field); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; }
-.actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 8px; }
-button { font: inherit; font-weight: 600; color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 22px; cursor: pointer; }
+
+label { display: block; font-weight: 600; font-size: 15px; margin: 20px 0 6px; }
+select, input { display: block; width: 100%; font: inherit; color: var(--fg); background: var(--field); border: 1px solid var(--rule); border-radius: 8px; padding: 11px 12px; min-height: 46px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 8px; }
+button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-weight: 600; color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 11px 22px; min-height: 46px; cursor: pointer; }
+button:hover:not(:disabled) { background: var(--accent-hover); border-color: var(--accent-hover); }
 button.secondary { color: var(--accent); background: transparent; }
-button:disabled { opacity: 0.5; cursor: default; }
+button.secondary:hover:not(:disabled) { color: #fff; }
+button:disabled { opacity: 0.45; cursor: default; }
+#copied:empty { display: none; }
 #linkbox { margin: 8px 0 12px; font-size: 15px; }
-.sendto { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; margin: 0 0 16px; }
-.sendto strong { word-break: break-word; }
-.letter { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin: 0 0 20px; }
-.block { margin: 0 0 22px; }
-.block h3 { font-size: 15px; line-height: 1.35; font-weight: 600; color: var(--muted); margin: 0 0 8px; overflow-wrap: anywhere; }
+.privacy { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px; }
+
+.dochead { border-bottom: 2px solid var(--fg); padding-bottom: 14px; margin: 0 0 20px; }
+.dochead h2 { margin: 0 0 6px; }
+.dochead .quiet { margin: 0; }
+.printdate, .fill { display: none; }
+.preview { margin: 8px 0 10px; }
+.notice { background: var(--soft); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 8px; padding: 12px 14px; margin: 0 0 20px; }
+.notice p { margin: 0 0 8px; font-weight: 600; }
+ul.srclinks { margin: 0; padding: 0 0 0 20px; }
+ul.srclinks > li { margin: 0 0 6px; overflow-wrap: anywhere; }
+.verified { margin-top: 4px; }
+.sendto { background: var(--soft); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 8px; padding: 12px 14px; margin: 0 0 20px; font-weight: 600; }
+
+.letter { border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 10px; padding: 12px 16px; margin: 0 0 16px; }
+.letter p { margin: 0 0 6px; }
+#letterlead { font-weight: 600; font-size: 15px; }
+
+.block { border: 1px solid var(--rule); border-radius: 10px; margin: 0 0 16px; overflow: hidden; }
+.block h3 { margin: 0; padding: 11px 16px; background: var(--soft); border-bottom: 1px solid var(--rule); font-size: 15px; line-height: 1.4; font-weight: 650; color: var(--fg); overflow-wrap: anywhere; }
+.block > .body { padding: 14px 16px 12px; }
 ul.quotes { margin: 0 0 8px; padding: 0 0 0 20px; }
-ul.quotes > li { margin: 0 0 8px; padding-left: 2px; white-space: pre-line; overflow-wrap: anywhere; }
+ul.quotes > li { margin: 0 0 8px; padding-left: 4px; white-space: pre-line; overflow-wrap: anywhere; }
+ul.quotes > li::marker { color: var(--faint); }
 ul.sub { margin: 6px 0 0; padding: 0 0 0 22px; list-style: circle; }
 ul.sub > li { margin: 0 0 4px; }
-.more { color: var(--muted); font-size: 14px; margin: 0 0 6px; }
+.more { color: var(--fg); font-size: 14px; margin: 4px 0 10px; padding: 8px 12px; background: var(--soft); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 6px; }
 .q { margin: 0 0 6px; }
-.meta { color: var(--muted); font-size: 14px; margin: 0; }
+.meta { color: var(--muted); font-size: 13px; margin: 0; padding-top: 10px; border-top: 1px dashed var(--rule); }
+.letter .meta { border-top: 0; padding-top: 2px; }
 .url { display: none; }
-footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 0 0; }
+.closing { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.closing p { font-size: 14px; }
+.app { font-size: 15px; }
+.app p { margin: 0; }
+footer { color: var(--faint); font-size: 13px; text-align: center; padding: 8px 16px 40px; }
+.printonly { display: none; }
+
 @media (max-width: 480px) {
-  main { padding: 24px 16px; }
-  .card { padding: 20px 16px; }
+  main { padding-top: 20px; }
+  .card { padding: 22px 16px; }
+  .tag { display: none; }
   .actions button { flex: 1 1 100%; }
+  .block h3, .block > .body { padding-left: 12px; padding-right: 12px; }
 }
 @media print {
-  :root { --fg: #000; --muted: #444; --bg: #fff; --card: #fff; --accent: #000; --rule: #999; }
-  body { font-size: 11pt; line-height: 1.4; }
-  main { max-width: none; padding: 0; }
-  .card { padding: 0; margin: 0; border-radius: 0; }
+  @page { size: letter; margin: 0.6in 0.65in 0.7in; @bottom-left { content: string(cond); font-size: 8pt; color: #333; } @bottom-right { content: counter(page) " / " counter(pages); font-size: 8pt; color: #333; } }
+  #title { string-set: cond content(); }
+  :root { --fg: #000; --muted: #333; --faint: #555; --bg: #fff; --card: #fff; --accent: #000; --rule: #999; --soft: #f2f2f2; }
+  body { font-size: 10.5pt; line-height: 1.4; background: #fff; }
+  .bar { border-bottom: 1.5pt solid #000; }
+  .bar-in { max-width: none; padding: 0 0 6pt; }
+  .tag { font-size: 9pt; color: #000; }
+  main { max-width: none; padding: 10pt 0 0; }
+  .card { padding: 0; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
   .noprint, button, footer { display: none !important; }
   h2 { font-size: 16pt; }
-  .block h3 { font-size: 10pt; color: #000; break-after: avoid; }
-  ul.quotes > li, ul.sub > li { break-inside: avoid; margin-bottom: 4pt; }
+  .dochead { border-bottom-width: 1pt; padding-bottom: 8pt; margin-bottom: 12pt; }
+  .printdate { display: block; font-size: 9pt; color: #333; margin-top: 4pt; }
+  .fill { display: flex; gap: 18pt; font-size: 9.5pt; margin: 0 0 12pt; }
+  .fill span { flex: 1; border-bottom: 0.75pt solid #000; padding-bottom: 12pt; }
+  .meta, .more, .closing, .letter, .notice { break-inside: avoid; }
+  .notice { border-radius: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .more, .block .meta { break-before: avoid; }
+  .block { break-inside: auto; border-color: #999; border-radius: 0; margin-bottom: 10pt; }
+  .block h3 { font-size: 9.5pt; padding: 5pt 8pt; break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .block > .body { padding: 6pt 8pt; }
+  .letter { border-radius: 0; break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  ul.quotes > li, ul.sub > li { break-inside: avoid; margin-bottom: 3pt; }
+  .meta { font-size: 8.5pt; }
   a { color: #000; text-decoration: none; }
-  .url { display: block; font-size: 8.5pt; word-break: break-all; }
+  .url { display: block; font-size: 8pt; word-break: break-all; }
   .printonly { display: block !important; }
 }
-.printonly { display: none; }
 </style>
 </head>
 <body>
+<header class="bar">
+  <div class="bar-in">
+    <svg class="mark" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true" focusable="false">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6fe0"/><stop offset="1" stop-color="#4aa3d8"/></linearGradient></defs>
+      <rect width="64" height="64" rx="14" fill="url(#g)"/>
+      <path d="M32 11 L49 17 V31 C49 42 41.5 49.5 32 53 C22.5 49.5 15 42 15 31 V17 Z" fill="#fff"/>
+      <path d="M36.5 18.5 c1.2-1.2 3.2-1.4 4.2-.4 s.8 3-.4 4.2 l-3.6 3.6 2.6 11.2 -2.2 2.2 -5.2-8.8 -3.8 3.8 .5 3.4 -1.7 1.7 -2.3-4.4 -4.4-2.3 1.7-1.7 3.4 .5 3.8-3.8 -8.8-5.2 2.2-2.2 11.2 2.6 z" fill="#1f5fd0"/>
+      <path d="M18 41 H26 L28.5 36.5 L31.5 46 L34 39 L35.5 41 H46" fill="none" stroke="#1d3f8f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="brand">Pilot Medical Guardian</span>
+    <span class="tag">FAA documents by condition</span>
+  </div>
+</header>
 <main>
-  <section id="loading" class="card"><p>Loading the list...</p></section>
+  <section id="loading" class="card"><p class="quiet">Loading the list...</p></section>
 
   <section id="office" class="card noprint" hidden>
+    <p class="eyebrow">For AME offices</p>
     <h1>FAA documents for a Special Issuance pilot</h1>
-    <p class="quiet">Pick the pilot's condition. You'll see what the FAA's published pages list for it, quoted word for word, with a link to each source. Print it, or send the pilot a link.</p>
+    <p class="quiet" id="intro">Pick the pilot's condition. You'll see what the FAA's published pages list for it, quoted word for word, with a link to each source. Print it, or send the pilot a link.</p>
     <label for="cond">Pilot's condition</label>
     <select id="cond"><option value="">Choose a condition</option></select>
     <div class="actions">
@@ -75,26 +152,39 @@ footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 
     </div>
     <p id="copied" class="quiet" aria-live="polite"></p>
     <input id="linkbox" type="text" readonly hidden aria-label="Link for the pilot">
-    <p class="quiet">The link carries only the condition, after the # sign. Browsers don't send that part to our server, so we never see it.</p>
+    <p class="quiet privacy">The link carries only the condition, after the # sign. Browsers don't send that part to our server, so we never see it.</p>
   </section>
 
+  <p id="preview" class="eyebrow preview noprint" hidden>Preview</p>
   <article id="sheet" class="card" hidden>
-    <h2 id="title"></h2>
-    <p class="quiet">In the FAA's own words, from its published pages.</p>
+    <div class="dochead">
+      <p class="eyebrow">FAA documents for a Special Issuance</p>
+      <h2 id="title"></h2>
+      <p class="quiet" id="wordsline">In the FAA's own words, from its published pages.</p>
+      <p class="quiet verified" id="verified" hidden></p>
+      <p class="printdate" id="printdate"></p>
+    </div>
+    <div class="fill"><span>Pilot</span><span>Date of birth</span><span>AME office</span></div>
     <p id="asknote" class="sendto" hidden>Ask your AME's office where to send these.</p>
+    <div class="notice" id="recheck" hidden>
+      <p>We're re-checking this list against the FAA's current pages. Until that's done, read the FAA's own pages:</p>
+      <ul class="srclinks" id="srclinks"></ul>
+    </div>
     <div class="letter" id="letter" hidden>
       <p id="letterlead"></p>
       <p class="q" id="letterq"></p>
       <p class="meta" id="lettermeta"></p>
     </div>
     <div id="blocks"></div>
-    <p class="quiet" id="pageline"></p>
-    <p class="quiet">This is the FAA's published wording, not medical or certification advice, and not a review of any pilot's case.</p>
-    <p class="quiet printonly">Free from Pilot Medical Guardian.</p>
+    <div class="closing">
+      <p class="quiet" id="pageline"></p>
+      <p class="quiet" id="closingline">This is the FAA's published wording, not medical or certification advice, and not a review of any pilot's case.</p>
+      <p class="quiet printonly">Free from Pilot Medical Guardian.</p>
+    </div>
     <div id="pilotprint" class="actions noprint" hidden><button id="print2" type="button">Print</button></div>
   </article>
 
-  <p id="app" class="card quiet noprint" hidden>With Guardian Pro, the Pilot Medical Guardian app can send these to your AME as one encrypted packet. <a href="https://apps.apple.com/app/id6772534988" target="_blank" rel="noopener noreferrer">Get it on the App Store</a></p>
+  <section id="app" class="card app noprint" hidden><p class="quiet">With Guardian Pro, the Pilot Medical Guardian app can send these to your AME as one encrypted packet. <a href="https://apps.apple.com/app/id6772534988" target="_blank" rel="noopener noreferrer">Get it on the App Store</a></p></section>
 
   <section id="bad" class="card" hidden>
     <h1>This link looks incomplete</h1>
@@ -105,22 +195,27 @@ footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 
     <h1>The list didn't load</h1>
     <p>Check your connection and reload this page.</p>
   </section>
-
-  <footer id="foot" hidden>Free from Pilot Medical Guardian. This page doesn't send what you pick anywhere.</footer>
 </main>
+<footer id="foot" hidden>Free from Pilot Medical Guardian. This page doesn't send what you pick anywhere.</footer>
 <script>
 // The AME request sheet. Office view: pick a condition, print or copy a link.
 // Pilot view: the link's #fragment (never sent to a server) carries only the condition id. No contact field
 // (Ryan 11/12: removed, so nobody can make a link on our address that tells a pilot where to send records).
-// Everything shown from the data is the FAA's words.
+// Everything shown from the data is the FAA's words. The server serves the data only while a fresh daily re-check
+// vouches for it (X-Sheet-Verified); otherwise it answers 503 and this page shows links-only mode from
+// sheet-links.json: condition names and links to the FAA's pages, no quotes and no checked dates.
 (async () => {
   const $ = (id) => document.getElementById(id);
-  const views = ["loading", "office", "sheet", "app", "bad", "error", "foot"];
+  const views = ["loading", "office", "preview", "sheet", "app", "bad", "error", "foot"];
   const show = (...ids) => { for (const v of views) $(v).hidden = !ids.includes(v); };
   const FAA = /^https:\/\/(www\.faa\.gov|www\.ecfr\.gov)\//;
   const day = (d) => new Date(d + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
   const quote = (q) => "\u201C" + q + "\u201D";
+  const TITLE = document.title;
+  const stamp = () => { $("printdate").textContent = "Printed " + new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }); };
+  window.addEventListener("beforeprint", stamp);
+  let copiedTimer = 0;
   const meta = (url, checked) => {
     const p = el("p", "meta"), a = el("a", null, "Source: FAA");
     if (FAA.test(url)) { a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; }
@@ -128,19 +223,57 @@ footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 
     return p;
   };
 
-  let data;
+  let data, linksOnly = false, verified = "";
   try {
     const r = await fetch("/sheet/sheet-data.json", { cache: "no-cache" });
     if (!r.ok) throw new Error("load");
     data = await r.json();
-  } catch { return show("error"); }
+    verified = r.headers.get("X-Sheet-Verified") || "";
+  } catch {
+    try {
+      const r = await fetch("/sheet/sheet-links.json", { cache: "no-cache" });
+      if (!r.ok) throw new Error("load");
+      data = await r.json();
+      linksOnly = true;
+    } catch { return show("error"); }
+  }
+  const vdate = verified ? new Date(verified) : null;
+  if (!linksOnly && vdate && !isNaN(vdate.getTime())) {
+    $("verified").textContent = "Re-checked against the FAA's current pages on " +
+      vdate.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) + ".";
+    $("verified").hidden = false;
+  }
+  if (linksOnly) {
+    $("wordsline").hidden = true;
+    // Nothing is quoted in this mode, so the closing lines must not say it is.
+    $("closingline").textContent = "Links to the FAA's own pages, not medical or certification advice, and not a review of any pilot's case.";
+    $("intro").textContent = "Pick the pilot's condition. You'll see links to the FAA's published pages for it. Print it, or send the pilot a link.";
+  }
+  // Links-only mode: one link per FAA source, named by its file ("FAA page" for the condition's own page).
+  const docName = (url) => {
+    try { return "FAA document: " + decodeURIComponent(new URL(url).pathname.split("/").filter(Boolean).pop() || ""); }
+    catch { return "FAA document"; }
+  };
+  function sources(c) {
+    const ul = $("srclinks");
+    ul.replaceChildren();
+    for (const u of Array.isArray(c.sources) ? c.sources : []) {
+      const li = el("li"), a = el("a", null, u === c.page ? "FAA page" : docName(u));
+      if (FAA.test(u)) { a.href = u; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      li.append(a, el("span", "url", u));
+      ul.append(li);
+    }
+  }
   const byId = new Map(data.conditions.map((c) => [c.id, c]));
 
   function render(c, pilot) {
-    $("title").textContent = "FAA documents for " + c.name;
+    $("title").textContent = c.name.trim();
+    document.title = c.name.trim() + ": FAA documents for a Special Issuance";
+    $("recheck").hidden = !linksOnly;
+    if (linksOnly) sources(c);
     // The letter line only when the curated list has the FAA's letter sentence for this condition (c.letter).
-    $("letter").hidden = !c.letter;
-    if (c.letter) {
+    $("letter").hidden = linksOnly || !c.letter;
+    if (!linksOnly && c.letter) {
       $("letterlead").textContent = "About the pilot's FAA Authorization letter, the FAA says:";
       $("letterq").textContent = quote(c.letter.quote);
       $("lettermeta").replaceWith(Object.assign(meta(c.letter.sourceURL, c.letter.checked), { id: "lettermeta" }));
@@ -150,7 +283,7 @@ footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 
     // "more" adds our own line (not FAA words) saying the document lists more than the block quotes.
     const box = $("blocks");
     box.replaceChildren();
-    for (const b of c.blocks) {
+    for (const b of linksOnly ? [] : c.blocks) {
       const sec = el("section", "block"), ul = el("ul", "quotes");
       for (const q of b.quotes) {
         if (typeof q === "string") { ul.append(el("li", null, quote(q))); continue; }
@@ -159,32 +292,38 @@ footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 
         if (sub.childElementCount) li.append(sub);
         ul.append(li);
       }
-      sec.append(el("h3", null, b.title), ul);
+      const inner = el("div", "body");
+      inner.append(ul);
+      sec.append(el("h3", null, b.title), inner);
       if (b.more === true) {
         const p = el("p", "more"), a = el("a", null, "Read it in full on the FAA's page");
         if (FAA.test(b.sourceURL)) { a.href = b.sourceURL; a.target = "_blank"; a.rel = "noopener noreferrer"; }
         p.append("This FAA page lists more than is quoted here. ", a, ".");
-        sec.append(p);
+        inner.append(p);
       }
-      sec.append(meta(b.sourceURL, b.checked));
+      inner.append(meta(b.sourceURL, b.checked));
       box.append(sec);
     }
     const page = $("pageline"), a = el("a", null, "the FAA's page for this condition");
     if (FAA.test(c.page)) { a.href = c.page; a.target = "_blank"; a.rel = "noopener noreferrer"; }
     page.replaceChildren("Not every word on the FAA's page is quoted here. Read ", a, ".", el("span", "url", c.page));
+    page.hidden = linksOnly; // links-only: the condition's FAA page is already the first link in the notice
     $("asknote").hidden = !pilot;
     $("pilotprint").hidden = !pilot;
   }
 
   function office() {
     const sel = $("cond");
-    if (sel.options.length === 1) for (const c of data.conditions) sel.append(new Option(c.name, c.id));
+    if (sel.options.length === 1) for (const c of data.conditions) sel.append(new Option(c.name.trim(), c.id));
     const update = () => {
       const c = byId.get(sel.value);
       $("print").disabled = $("copy").disabled = !c;
       $("copied").textContent = "";
+      clearTimeout(copiedTimer);
+      $("copy").textContent = "Copy link for the pilot";
+      if (!c) document.title = TITLE;
       $("linkbox").hidden = true;
-      if (c) { render(c, false); show("office", "sheet", "foot"); }
+      if (c) { render(c, false); stamp(); show("office", "preview", "sheet", "foot"); }
       else show("office", "foot");
     };
     sel.onchange = update;
@@ -194,6 +333,9 @@ footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 
       const link = location.origin + location.pathname + "#" + p.toString();
       try {
         await navigator.clipboard.writeText(link);
+        $("copy").textContent = "Copied";
+        clearTimeout(copiedTimer);
+        copiedTimer = setTimeout(() => { $("copy").textContent = "Copy link for the pilot"; }, 2000);
         $("copied").textContent = "Link copied. Paste it into an email or text to the pilot.";
       } catch {
         $("copied").textContent = "Copy this link and send it to the pilot:";
@@ -209,8 +351,9 @@ footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 
     const p = new URLSearchParams(location.hash.slice(1));
     if (p.get("for") !== "pilot") return office();
     const c = byId.get(p.get("c") || "");
-    if (!c) return show("bad", "foot");
+    if (!c) { document.title = TITLE; return show("bad", "foot"); }
     render(c, true);
+    stamp();
     show("sheet", "app", "foot");
   }
   $("print2").onclick = () => window.print();

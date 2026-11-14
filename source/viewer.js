@@ -3,7 +3,7 @@
 // The PMGL decryptor (shared/pmgl.mjs) is inlined above this script at build time.
 (async () => {
   const $ = (id) => document.getElementById(id);
-  const show = (id) => { for (const s of document.querySelectorAll("section")) s.hidden = s.id !== id; };
+  const show = (id) => { for (const s of document.querySelectorAll("section")) s.hidden = s.id !== id; $("resource").hidden = id !== "ready"; };
   const frag = location.hash.slice(1);
   history.replaceState(null, "", location.pathname);
   const m = /^([A-Za-z0-9_-]{22})\.([A-Za-z0-9_-]{43})$/.exec(frag);
@@ -17,14 +17,25 @@
     if (!r.ok) return show(r.status === 410 ? "gone" : "error");
     info = await r.json();
   } catch { return show("error"); }
-  $("expires").textContent = new Date(info.expiresAt).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+  const short = { year: "numeric", month: "short", day: "numeric" };
+  const exp = new Date(info.expiresAt);
+  $("expires").textContent = exp.toLocaleDateString(undefined, short);
+  $("sent").textContent = new Date(info.sentAt).toLocaleDateString(undefined, short);   // the viewer's own time zone
+  $("filename").replaceChildren("Pilot medical records ", Object.assign(document.createElement("span"), { className: "nowrap", textContent: `${info.sentDay}.pdf` }));
+  const kb = Math.round(info.size / 1e3);
+  if (info.size > 0) $("sizepart").textContent = `, about ${kb < 1000 ? `${Math.max(1, kb)} KB` : `${(info.size / 1e6).toFixed(1)} MB`}`;
   show("ready");
 
   const PDF = [0x25, 0x50, 0x44, 0x46, 0x2d]; // %PDF-
   $("download").addEventListener("click", async () => {
     const button = $("download"), progress = $("progress");
+    const meter = $("meter"), fill = $("meter-fill");
     button.disabled = true;
+    progress.className = "progress";
     progress.textContent = "Downloading...";
+    fill.style.width = "0%";
+    meter.hidden = false;
+    let got = 0;
     try {
       const r = await fetch(`/v1/links/${id}/download`, { method: "POST", cache: "no-store" });
       if (!r.ok) return show(r.status === 410 ? "gone" : "error");
@@ -46,6 +57,8 @@
       for (;;) {
         const { done, value } = await reader.read();
         if (done) break;
+        got += value.length;
+        if (info.size > 0) fill.style.width = `${Math.min(100, Math.round((got / info.size) * 100))}%`;
         for (const p of await dec.push(value)) keep(p);
       }
       keep(await dec.finish());
@@ -59,6 +72,8 @@
       a.remove();
       parts.length = 0;
       setTimeout(() => URL.revokeObjectURL(a.href), 60000);   // don't keep the plaintext in memory longer than needed
+      fill.style.width = "100%";
+      progress.className = "progress done";
       progress.textContent = "Downloaded. Look in your Downloads folder.";
       button.disabled = false;
     } catch (e) {

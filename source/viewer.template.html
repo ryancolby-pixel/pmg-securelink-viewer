@@ -9,39 +9,95 @@
 <style>/*__STYLE__*/</style>
 </head>
 <body>
-<main>
-  <section id="loading"><p>Opening the link...</p></section>
+<header class="bar">
+  <div class="bar-in">
+    <svg class="mark" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true" focusable="false">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6fe0"/><stop offset="1" stop-color="#4aa3d8"/></linearGradient></defs>
+      <rect width="64" height="64" rx="14" fill="url(#g)"/>
+      <path d="M32 11 L49 17 V31 C49 42 41.5 49.5 32 53 C22.5 49.5 15 42 15 31 V17 Z" fill="#fff"/>
+      <path d="M36.5 18.5 c1.2-1.2 3.2-1.4 4.2-.4 s.8 3-.4 4.2 l-3.6 3.6 2.6 11.2 -2.2 2.2 -5.2-8.8 -3.8 3.8 .5 3.4 -1.7 1.7 -2.3-4.4 -4.4-2.3 1.7-1.7 3.4 .5 3.8-3.8 -8.8-5.2 2.2-2.2 11.2 2.6 z" fill="#1f5fd0"/>
+      <path d="M18 41 H26 L28.5 36.5 L31.5 46 L34 39 L35.5 41 H46" fill="none" stroke="#1d3f8f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="brand">Pilot Medical Guardian</span>
+    <span class="tag">Secure records link</span>
+  </div>
+</header>
 
-  <section id="ready" hidden>
+<main>
+  <section id="loading" class="card"><p class="quiet">Opening the link...</p></section>
+
+  <section id="ready" class="card" hidden>
+    <p class="eyebrow">Records for an FAA medical exam</p>
     <h1>Medical records sent by a pilot</h1>
-    <p>This link stops working on <span id="expires"></span>.</p>
-    <button id="download" type="button">Download PDF</button>
-    <p id="progress" class="quiet" aria-live="polite"></p>
-    <p class="quiet">The pilot encrypted this file on their device. Pilot Medical Guardian doesn't have the key and can't read it.</p>
-    <p class="quiet">The pilot prepared these records. Pilot Medical Guardian doesn't review or verify them, and nothing here is medical advice or an FAA determination.</p>
-    <p class="quiet">Have a Special Issuance pilot coming in? <a href="sheet" target="_blank" rel="noopener noreferrer">Free list of the FAA's documents by condition</a></p>
+
+    <div class="doc">
+      <svg class="doc-icon" viewBox="0 0 40 48" width="40" height="48" aria-hidden="true" focusable="false">
+        <path d="M6 2 H26 L36 12 V44 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 V4 a2 2 0 0 1 2 -2 z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M26 2 V12 H36" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="8" y="27" width="24" height="11" rx="2" fill="#c8102e"/>
+        <text x="20" y="35.5" text-anchor="middle" font-size="8" font-weight="700" fill="#fff" font-family="-apple-system, Segoe UI, Arial, sans-serif">PDF</text>
+      </svg>
+      <div class="doc-text">
+        <p class="doc-name" id="filename">Pilot medical records.pdf</p>
+        <p class="doc-meta">PDF document<span id="sizepart"></span></p>
+      </div>
+    </div>
+
+    <dl class="facts">
+      <div><dt>Sent</dt><dd id="sent"></dd></div>
+      <div><dt>Link stops working</dt><dd id="expires"></dd></div>
+    </dl>
+
+    <p class="check">
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3 5.5 h14 v9 h-14 z M3 5.5 l7 5 l7 -5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span>Not expecting this? Check with the pilot before you open the file.</span>
+    </p>
+    <button id="download" type="button">
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M10 3 V13 M5.5 8.5 L10 13 L14.5 8.5 M4 16.5 H16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Download PDF</span>
+    </button>
+    <div class="meter" id="meter" hidden><div class="meter-fill" id="meter-fill"></div></div>
+    <p id="progress" class="progress" aria-live="polite"></p>
+    <p class="noaccount">No account or password is needed to download this file.</p>
+
+    <ul class="notes">
+      <li>
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><rect x="4" y="9" width="12" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 9 V6.5 a3 3 0 0 1 6 0 V9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span>The pilot encrypted this file on their device. Pilot Medical Guardian doesn't have the key and can't read it.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9 V14 M10 6.2 V6.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>The pilot prepared these records. Pilot Medical Guardian doesn't review or verify them, and nothing here is medical advice or an FAA determination.</span>
+      </li>
+    </ul>
   </section>
 
-  <section id="gone" hidden>
+  <aside id="resource" class="resource" hidden>
+    <p class="resource-title">Have a Special Issuance pilot coming in?</p>
+    <p><a href="sheet" target="_blank" rel="noopener noreferrer">Free list of the FAA's documents by condition</a></p>
+  </aside>
+
+  <section id="gone" class="card" hidden>
     <h1>This link isn't working</h1>
     <p>It may have expired or been stopped. Ask the pilot to send a new one.</p>
   </section>
 
-  <section id="incomplete" hidden>
+  <section id="incomplete" class="card" hidden>
     <h1>This link looks incomplete</h1>
     <p>Email programs sometimes cut long links. Copy the whole link, or ask the pilot to send it again.</p>
   </section>
 
-  <section id="notpdf" hidden>
+  <section id="notpdf" class="card" hidden>
     <h1>This file couldn't be opened</h1>
     <p>Nothing was downloaded. Ask the pilot to send a new link.</p>
   </section>
 
-  <section id="error" hidden>
+  <section id="error" class="card" hidden>
     <h1>Something went wrong</h1>
     <p>Check your connection and reload this page. If it keeps happening, ask the pilot to send a new link.</p>
   </section>
 </main>
+
 <script>/*__SCRIPT__*/</script>
 </body>
 </html>

@@ -1,0 +1,257 @@
+{
+ "note": "Made by SecureLink/server/tools/build-sheet.mjs from sheet-data.json. Condition ids, names and the FAA's own URLs only, no FAA words. The page shows these links while the quotes are being re-checked.",
+ "conditions": [
+  {
+   "id": "si-adhd",
+   "name": "ADHD",
+   "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/adhd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/ADHD_document_checklist.pdf",
+    "https://www.faa.gov/ame_guide/media/ADHD_fast_track_eval_general_info.pdf",
+    "https://www.faa.gov/ame_guide/media/ADHD_standard_track_eval_general_info.pdf",
+    "https://www.faa.gov/ame_guide/media/ADHD_standard_track_report_requirements.pdf"
+   ]
+  },
+  {
+   "id": "si-asthma",
+   "name": "Asthma",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item35/amd/asthma",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/AASI_Asthma.pdf"
+   ]
+  },
+  {
+   "id": "si-afib",
+   "name": "Atrial fibrillation",
+   "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/afib",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/afib",
+    "https://www.faa.gov/ame_guide/media/nonvalvularAFIB_Status_summary.pdf"
+   ]
+  },
+  {
+   "id": "si-aneurysm",
+   "name": "Brain Aneurysm",
+   "page": "https://www.faa.gov/ame_guide/media/Brain-Aneurysm.pdf",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/Brain-Aneurysm.pdf",
+    "https://www.faa.gov/ame_guide/media/Brain-Bleed.pdf"
+   ]
+  },
+  {
+   "id": "si-cancer-breast",
+   "name": "Breast cancer",
+   "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/breast_cancer",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/breast_cancer"
+   ]
+  },
+  {
+   "id": "si-copd",
+   "name": "COPD",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item35/amd/copd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/copd",
+    "https://www.faa.gov/ame_guide/media/COPD_Status_Summary.pdf"
+   ]
+  },
+  {
+   "id": "si-cad-pci",
+   "name": "Coronary artery disease with stent (PCI)",
+   "page": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+    "https://www.faa.gov/ame_guide/media/CHD_CAD_Recert_Status_Summary.pdf",
+    "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_1st-2nd_class.pdf",
+    "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_3rd_class.pdf"
+   ]
+  },
+  {
+   "id": "si-cabg",
+   "name": "Coronary bypass (CABG)",
+   "page": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+    "https://www.faa.gov/ame_guide/media/CHD_CAD_Recert_Status_Summary.pdf",
+    "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_1st-2nd_class.pdf",
+    "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_3rd_class.pdf"
+   ]
+  },
+  {
+   "id": "si-ssri",
+   "name": "Depression / anxiety on an approved antidepressant",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item47/amd/antidepressants",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/AASI_Anxiety_Depression_Related_Conditions.pdf",
+    "https://www.faa.gov/ame_guide/media/PATH_Status_Summary_Anxiety_Depression_Related_Conditions.pdf",
+    "https://www.faa.gov/ame_guide/media/HIMS_AME_Checklist_SSRI_Recertification.pdf",
+    "https://www.faa.gov/ame_guide/media/SSRI_Recertification_Aid.pdf",
+    "https://www.faa.gov/ame_guide/media/Airman_Information_SSRI_Initial_Certification.pdf",
+    "https://www.faa.gov/ame_guide/media/HIMS_AME_Checklist_SSRI_Initial_Certification.pdf",
+    "https://www.faa.gov/ame_guide/media/FAA_Certification_Aid_SSRI_Initial_Certification.pdf"
+   ]
+  },
+  {
+   "id": "si-valve",
+   "name": "Heart valve replacement or repair",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item36/amd/valvular",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/third_class/valve_rep",
+    "https://www.faa.gov/ame_guide/media/CardiacValveReplacementProtocol.pdf"
+   ]
+  },
+  {
+   "id": "si-htn",
+   "name": "Hypertension on medication",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item55/amd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/hypertension",
+    "https://www.faa.gov/ame_guide/app_process/exam_tech/item36/amd/hypertension"
+   ]
+  },
+  {
+   "id": "si-dm-insulin",
+   "name": "Insulin-treated diabetes",
+   "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/itdm",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/ITDM-Renewal_Certification_Requirements.pdf",
+    "https://www.faa.gov/ame_guide/dec_cons/disease_prot/diabetes_insulin/subsequent"
+   ]
+  },
+  {
+   "id": "si-kidney-stones",
+   "name": "Kidney stones",
+   "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/renal_calculi",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/renal_calculi"
+   ]
+  },
+  {
+   "id": "si-cancer-lymphoma",
+   "name": "Lymphoma and Hodgkin's disease",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item45/amd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/hodgkins",
+    "https://www.faa.gov/ame_guide/app_process/exam_tech/item45/amd"
+   ]
+  },
+  {
+   "id": "si-cancer-melanoma",
+   "name": "Melanoma",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item40/amd/malignantmelanoma",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/melanoma",
+    "https://www.faa.gov/ame_guide/app_process/exam_tech/item40/amd/malignantmelanoma"
+   ]
+  },
+  {
+   "id": "si-migraine",
+   "name": "Migraine",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item46/amd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/migraine"
+   ]
+  },
+  {
+   "id": "si-osa",
+   "name": "Obstructive Sleep Apnea on CPAP",
+   "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/osa",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/AASI_Sleep_Apnea_OSA.pdf",
+    "https://www.faa.gov/ame_guide/media/OSA_Treated_Status_Report.pdf"
+   ]
+  },
+  {
+   "id": "si-pacemaker",
+   "name": "Pacemaker",
+   "page": "https://www.faa.gov/ame_guide/dec_cons/disease_prot/pacemaker",
+   "sources": [
+    "https://www.faa.gov/ame_guide/dec_cons/disease_prot/pacemaker",
+    "https://www.faa.gov/ame_guide/media/Pacemaker_Status_Summary.pdf"
+   ]
+  },
+  {
+   "id": "si-cardiac",
+   "name": "Post-cardiac event (e.g., MI, stent, bypass)",
+   "page": "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/third_class/chd",
+    "https://www.faa.gov/ame_guide/media/CHD_CAD_Recert_Status_Summary.pdf",
+    "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_1st-2nd_class.pdf",
+    "https://www.faa.gov/ame_guide/media/Coronary_Heart_Disease_Protocol_3rd_class.pdf"
+   ]
+  },
+  {
+   "id": "si-cancer-prostate",
+   "name": "Prostate cancer",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item41/amd/nd/prostatic",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/prostate_cancer",
+    "https://www.faa.gov/ame_guide/app_process/exam_tech/item41/amd/nd/prostatic"
+   ]
+  },
+  {
+   "id": "si-pe-dvt",
+   "name": "Pulmonary embolism / DVT (anticoagulation)",
+   "page": "https://www.faa.gov/ame_guide/special_iss/all_classes/dvt",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/dvt",
+    "https://www.faa.gov/ame_guide/dec_cons/disease_prot/thromboembolic"
+   ]
+  },
+  {
+   "id": "si-seizure",
+   "name": "Seizure disorder / epilepsy",
+   "page": "https://www.faa.gov/ame_guide/media/Seizures_Epilepsy.pdf",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/Seizures_Epilepsy.pdf"
+   ]
+  },
+  {
+   "id": "si-stroke",
+   "name": "Stroke or TIA",
+   "page": "https://www.faa.gov/ame_guide/media/Stroke-CVA-TIA.pdf",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/AASI_CVA-Stroke.pdf",
+    "https://www.faa.gov/ame_guide/media/Stroke-CVA-TIA.pdf"
+   ]
+  },
+  {
+   "id": "si-hims",
+   "name": "Substance or alcohol dependence (HIMS)",
+   "page": "https://www.faa.gov/ame_guide/abuse_dep",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/HIMS_Drug_Alcohol_Monitoring_Checklist.pdf",
+    "https://www.faa.gov/ame_guide/media/Drug_Alcohol_Monitoring_Recertification_Aid.pdf"
+   ]
+  },
+  {
+   "id": "si-thyroid",
+   "name": "Thyroid disease",
+   "page": "https://www.faa.gov/ame_guide/media/Hypothryroid_Hypothyroidism.pdf",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/hypothyroidism",
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/hyperthyroidism",
+    "https://www.faa.gov/ame_guide/media/Hypothryroid_Hypothyroidism.pdf"
+   ]
+  },
+  {
+   "id": "si-tbi",
+   "name": "Traumatic brain injury",
+   "page": "https://www.faa.gov/ame_guide/media/Head-Injury.pdf",
+   "sources": [
+    "https://www.faa.gov/ame_guide/media/Head-Injury.pdf"
+   ]
+  },
+  {
+   "id": "si-dm2",
+   "name": "Type 2 Diabetes on oral medication",
+   "page": "https://www.faa.gov/ame_guide/app_process/exam_tech/item48/amd/diabetes",
+   "sources": [
+    "https://www.faa.gov/ame_guide/special_iss/all_classes/diabetes",
+    "https://www.faa.gov/ame_guide/dec_cons/disease_prot/diabetes_med",
+    "https://www.faa.gov/ame_guide/media/diabetes_or_hyperglycemia_on_meds_report.pdf"
+   ]
+  }
+ ]
+}

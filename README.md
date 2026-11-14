@@ -16,14 +16,14 @@ The live page is at `/r` on the host in the link (the part before the `#`):
 
 It should print the same hash as `viewer.html` in SHA256SUMS:
 
-    a964fa12e08cd1452eefeda6f9e60a5218fe73d5584d6403bdb40b9e28e13241
+    5256d46bb6c303e9ccabbcb288ac1dccf523dd38cfdd4a722dde2d5f1417177d
 
 ## What's in it
 
-- `viewer.html`: the page exactly as the server sends it (9987 bytes). Its Content-Security-Policy allows only
+- `viewer.html`: the page exactly as the server sends it (18222 bytes). Its Content-Security-Policy allows only
   the inline script and style with these hashes, so the browser runs nothing else:
-  - script `sha256-dm1L3lzxrINlIJNH/l7IEuPFEAn3S+M/4kF8wtUCZH8=`
-  - style `sha256-m8KM+kK2H3F9XLOv0gEm80I+Dewmn3IEg8+uL4HdGig=`
+  - script `sha256-V5kWq9O8VkZN/TWJpnqMpHPhr6oOekFMLG0jv0n4VTU=`
+  - style `sha256-l2hI/xQOlHT0xyn+hzUIBSKWKmL7QAlVR2kYN7igPGk=`
 - `source/`: what it's built from. `build-viewer.mjs` puts `pmgl.mjs` (the file format: AES-256-GCM in 4 MiB chunks),
   `viewer.js` and `viewer.css` into `viewer.template.html`.
 
@@ -35,27 +35,38 @@ short-lived download address) and to the storage address that returns.
 `/sheet` on the same host is a free list of the FAA's own published documents for each Special Issuance condition,
 quoted word for word, with a link to each FAA source. It holds no pilot data.
 
-- `sheet/index.html`: the page exactly as the server sends it (11315 bytes). Its Content-Security-Policy
+- `sheet/index.html`: the page exactly as the server sends it (20367 bytes). Its Content-Security-Policy
   allows only the inline script and style with these hashes:
-  - script `sha256-WP+y1zFUVzC5VP+9slJJExn6/aUB/Y5oBp1KORzszes=`
-  - style `sha256-kijD6Vg0sL/W+QTev39l/bLq9iBxl3j4zJ8I5rparKA=`
+  - script `sha256-uCPf6Imp6XuSNGE5m7YpFzSJtZIEMSEn3qCZ/zBMNpI=`
+  - style `sha256-ASfx38J8+1JboS5OiS0Prq5aRaiNplRQgyZ+eFQlUlE=`
 - `sheet/sheet-data.json`: the list, exactly as the server sends it at `/sheet/sheet-data.json` (98124 bytes).
   The quotes are the FAA's, so they keep the FAA's own punctuation.
+- `sheet/sheet-links.json`: each condition's name and the links to its FAA pages, with no FAA words, exactly as the
+  server sends it at `/sheet/sheet-links.json` (9577 bytes). `build-sheet.mjs` makes it from the list.
 - `source/`: `build-sheet-data.py` makes the list from `sheet-curated.json` and checks every quote again against a
   fresh copy of the FAA document it cites; one quote it can't find there stops the build. `build-sheet.mjs` puts the
   page and the list into the server unchanged.
 
-The page loads nothing but its own data file and sends nothing anywhere. The condition you pick goes only in the part
+The quotes are shown only while they are freshly re-checked. An automated check re-reads every quote on the FAA's
+current pages each day and records that the list still matches, byte for byte. If that record is missing, older than
+36 hours, or the check found a problem, the server answers `/sheet/sheet-data.json` with "rechecking" instead, and
+the page shows only the links to the FAA's own pages until the list passes again. When it does serve the list, the
+`X-Sheet-Verified` header says when it was last re-checked.
+
+The page loads nothing but its own two data files and sends nothing anywhere. The condition you pick goes only in the part
 of the link after the `#`, which browsers never send to a server.
 
 To check it, compare the live files with SHA256SUMS:
 
     curl -s https://<same host>/sheet | shasum -a 256
     curl -s https://<same host>/sheet/sheet-data.json | shasum -a 256
+    curl -s https://<same host>/sheet/sheet-links.json | shasum -a 256
 
 They should print:
 
-    99d40043a83394786072169f52b1b4a2b2f4de04baba0f917828aa7322adb847  sheet/index.html
-    1fa2120e2133d16610db3a3542b958971a16d0785188ff5a42bc60138a283120  sheet/sheet-data.json
+    b41255b21d2b2de8590d96a9adfaca03eaa2c26e73ddd0d395d39114aeea9ad3  sheet/index.html
+    7bf3fec4fdb51c5a6b174b711f6461b7409e7e4bb861236c55e401080c158ddb  sheet/sheet-data.json
+    872ff20300f0c3b907e1b7701128c0b00593ee7fc43c8db111c82bddd17d0152  sheet/sheet-links.json
 
-The daily check compares both of these with the live server too.
+(The data file prints this hash only while it is being served; see above.) The daily check compares all three with
+the live server too.
